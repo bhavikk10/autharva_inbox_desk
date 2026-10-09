@@ -87,6 +87,9 @@ def create_app(service=None,settings=None):
     def view(tid,time,timezone=None):
         try: return service.view(tid,time,zone(timezone))
         except KeyError: raise HTTPException(404,'Thread not found.')
+    @app.get('/api/health')
+    async def health():
+        return {'status':'ok'}
     @app.get('/api/config')
     async def config():
         ready,error=True,None

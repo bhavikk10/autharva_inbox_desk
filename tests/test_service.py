@@ -26,6 +26,18 @@ def setup(tmp_path, analyzer=None):
     return AttentionService(store,analyzer or TestAnalyzer())
 
 
+def test_invented_date_is_classified_as_evidence_failure(tmp_path):
+    async def run():
+        service=setup(tmp_path)
+        tid='northstar';clock=at('2026-10-09T18:00:00')
+        mid=service.prepared(tid,clock)[1][0].id
+        service.analyzer.result=assessment([item(evidence_message_ids=[mid],deadline={'expression':'2099-01-01','message_id':mid})])
+        result=await service.analyze(tid,clock)
+        assert result['status']=='error' and result['attention'] is None
+        assert service.store.latest_attempt(service.prepared(tid,clock)[2])['error_category']=='evidence'
+    asyncio.run(run())
+
+
 def test_cache_reuse_on_clock_change(tmp_path):
     async def run():
         analyzer=TestAnalyzer()

@@ -131,7 +131,7 @@ class AttentionService:
                 elif isinstance(error,TimeoutError):detail=str(error) or 'Analysis timed out. No assessment was accepted.'
                 else: detail=str(error)
                 self.errors[key]=detail
-                category='schema' if isinstance(error,ValidationError) else 'timeout' if 'timed out' in detail.lower() else 'evidence' if 'evidence' in detail.lower() or 'quote' in detail.lower() or 'obligation disappeared' in detail.lower() else 'provider'
+                category='schema' if isinstance(error,ValidationError) else 'timeout' if isinstance(error,TimeoutError) or 'timed out' in detail.lower() else 'evidence' if any(marker in detail.lower() for marker in ['evidence','quote','obligation disappeared','date expression']) else 'provider'
                 self.store.save_operation(operation_id,'attempt',{**attempt,'status':'error','error':detail,'error_category':category,'duration_ms':round((time.monotonic()-started)*1000)},key)
                 log.warning('Analysis failed for %s: %s',tid,type(error).__name__)
                 if self.fallback:

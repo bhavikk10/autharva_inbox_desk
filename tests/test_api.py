@@ -11,6 +11,15 @@ def client(tmp_path):
     return TestClient(create_app(service,Settings(provider='gemini'))), service
 
 
+def test_health_check_does_not_require_model_configuration(tmp_path):
+    app,service=client(tmp_path)
+    with app:
+        response=app.get('/api/health')
+        assert response.status_code==200
+        assert response.json()=={'status':'ok'}
+        assert service.analyzer.calls==0
+
+
 def test_api_rejects_naive_time_and_missing_thread(tmp_path):
     app,_=client(tmp_path)
     assert app.get('/api/threads?as_of=2026-10-09T18:00:00').status_code==422

@@ -18,6 +18,46 @@ def test_settings_repr_excludes_credentials():
     assert 'test-sensitive-key' not in repr(Settings(glm_key='test-sensitive-key'))
 
 
+@pytest.mark.parametrize('general',[False,True])
+def test_ollama_generation_constrains_all_source_ids(monkeypatch,general):
+    import json
+    from test_core import message
+    from backend.providers import extraction_schema
+    thread={**seed_threads()[0],'id':'gmail-test' if general else 'test'}
+    messages=[message('gmail-long-id-1'),message('gmail-long-id-2','outbound')]
+    payloads=[]
+    data={'is_sales_related':False,'lifecycle':'unknown','buyer_intent':'unknown','summary':'No action.',
+          'reason':'No request remains.','blockers':[],'obligations':[],'recommendations':[],
+          'ambiguity_notes':[],'non_substantive_message_ids':[],'proposal_message_id':None,'deferral':None}
+    if general:data.update(category='notification',conversation_state='informational')
+    async def post(self,url,**kwargs):
+        payloads.append(kwargs['json'])
+        return httpx.Response(200,json={'message':{'content':json.dumps(data)},'done_reason':'stop'},request=httpx.Request('POST',url))
+    monkeypatch.setattr(httpx.AsyncClient,'post',post)
+    asyncio.run(OllamaAnalyzer(Settings()).analyze(thread,messages))
+    schema=payloads[0]['format'];allowed=[m.id for m in messages]
+    assert schema['$defs']['EvidenceQuote']['properties']['message_id']['enum']==allowed
+    assert schema['$defs']['DatePhrase']['properties']['message_id']['enum']==allowed
+    for name in ['LedgerObligation','Recommendation']:
+        assert schema['$defs'][name]['properties']['evidence_message_ids']['items']['enum']==allowed
+    assert schema['properties']['non_substantive_message_ids']['items']['enum']==allowed
+    assert schema['properties']['proposal_message_id']['anyOf'][0]['enum']==allowed
+    assert 'enum' not in extraction_schema(thread).model_json_schema()['$defs']['EvidenceQuote']['properties']['message_id']
+
+
+def test_glm_cooldown_fails_fast_without_sending_another_request(tmp_path):
+    import json,time
+    from backend.providers import glm_request_slot
+    folder=tmp_path/'runtime';folder.mkdir()
+    (folder/'glm-provider-cooldown.json').write_text(json.dumps({'until':time.time()+90}))
+    async def run():
+        with pytest.raises(ValueError,match='cooling down'):
+            async with asyncio.timeout(.2):
+                async with glm_request_slot(1):
+                    pytest.fail('An occupied remote stream must not accept another request.')
+    asyncio.run(run())
+
+
 def test_ollama_evidence_failure_requests_one_new_grounded_output(monkeypatch):
     import json
     from test_grounding import grounded_item

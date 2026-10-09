@@ -82,6 +82,7 @@ def test_primary_deadline_cancels_before_local_fallback(tmp_path):
         assert primary.cancelled
         assert result['status'] == 'analyzed'
         assert 'budget' in result['provenance']['fallback']['reason']
+        assert base.store.latest_attempt(service.prepared('northstar',at('2026-10-09T18:00:00'))[2])['error_category']=='timeout'
     asyncio.run(run())
 
 

@@ -20,7 +20,7 @@ The analyzer interface supports Ollama, GLM and Gemini with the same validated s
 
 For dates, the model returns the raw phrase and its source message ID. It does not calculate a deadline or receive the evaluation clock. Code anchors the phrase to message metadata, taking explicit timezones into account. Supported expressions include explicit dates, tomorrow, weekdays, next week and month-end. Unsupported or ambiguous expressions remain unresolved with an explanation.
 
-Referenced IDs must exist in the visible thread. Evidence quotes and date expressions must match their source text; whitespace is normalized for comparison. Claimed resolutions require later supporting evidence. A model may receive one bounded regeneration request with the validation diagnostic, after which the result still undergoes full validation.
+Referenced IDs must exist in the visible thread. Ollama generation constrains source references to the visible message IDs. Evidence quotes and raw date expressions must match their source wording; email line wrapping, whitespace and curly versus straight quotation marks are normalized for comparison. Claimed resolutions require later supporting evidence. A model may receive one bounded regeneration request with the validation diagnostic, after which the result still undergoes full validation.
 
 These checks reject malformed or unsupported output, but cannot prove semantic correctness. An acknowledgement may be mistaken for an answer, or an answered request may remain open. Changing the model can change these judgments even when the surrounding pipeline stays the same.
 
@@ -44,7 +44,7 @@ Saved runs preserve the provider, model, input identity and creation time. Repla
 
 The application persists FIFO analysis jobs and runs a continuous worker. GLM calls are serialized across the local application and evaluation processes to respect the account's one-stream restriction. This coordination is designed for a single host, not a distributed deployment.
 
-Primary analysis has a configurable total execution budget, including retries and provider-lock waits. An optional, explicitly enabled Ollama fallback receives a separate budget and produces its own validated result and cache entry. The primary failure remains recorded, and provenance identifies the provider that actually succeeded.
+Primary analysis has a configurable total execution budget, including retries and provider-lock waits. If a previous remote generation is still cooling down, GLM reports that immediately rather than spending the next request's budget waiting. An optional, explicitly enabled Ollama fallback receives a separate budget and produces its own validated result and cache entry. The primary failure remains recorded, and provenance identifies the provider that actually succeeded.
 
 Missing configuration, provider errors or invalid output leave an explicit error or unassessed state. Failure is never converted into T4. Reply drafts use the configured model and remain editable text; there is no Gmail sending operation.
 

@@ -29,6 +29,34 @@ def test_grounded_quotes_and_resolution_chronology():
         validate_evidence(data,[m,done.model_copy(update={'sent_at':at('2026-10-04T12:00:00')})],require_grounded=True)
 
 
+def test_resolution_accepts_smart_quotes_but_rejects_changed_words():
+    from backend.domain import ResolvedItem,validate_evidence
+    ask=message(body='Please close the enquiry.')
+    done=message('m2','outbound','I\u2019ve closed the enquiry and\nremoved the planned follow-ups.',sent='2026-10-06T14:00:00')
+    source={'message_id':'m1','quote':'Please close the enquiry.'}
+    g=grounded_item(urgent=False,action_evidence=source,ownership_evidence=source,urgency_evidence=None)
+    r=ResolvedItem(**g.model_dump(),resolution_status='fulfilled',resolution_evidence={
+        'message_id':'m2','quote':"I've closed the enquiry and removed the planned follow-ups."})
+    data=assessment();data.resolved_items=[r]
+    validate_evidence(data,[ask,done],require_grounded=True)
+    r.resolution_evidence.quote="I've closed the enquiry and sent the planned follow-ups."
+    with pytest.raises(ValueError,match='quote'):
+        validate_evidence(data,[ask,done],require_grounded=True)
+
+
+def test_date_grounding_ignores_email_line_wrapping_without_accepting_invented_dates():
+    from backend.domain import validate_evidence
+    m=message(body='Please confirm SCIM urgently by tomorrow\nat 5 pm IST.')
+    source={'message_id':'m1','quote':'Please confirm SCIM urgently by tomorrow at 5 pm IST.'}
+    g=grounded_item(deadline={'message_id':'m1','expression':'tomorrow at 5 pm IST'},action_evidence=source,ownership_evidence=source)
+    data=assessment([g])
+    validate_evidence(data,[m],require_grounded=True)
+    assert data.open_items[0].deadline.expression=='tomorrow at 5 pm IST'
+    data.open_items[0].deadline.expression='tomorrow at 6 pm IST'
+    with pytest.raises(ValueError,match='verbatim'):
+        validate_evidence(data,[m],require_grounded=True)
+
+
 def test_citation_index_is_derived_from_explicit_source_references_without_rewriting_raw():
     import json
     from backend.domain import ExtractionAssessment,Assessment,validate_evidence

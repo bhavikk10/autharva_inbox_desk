@@ -127,6 +127,22 @@ def extraction_schema(thread):
     return GeneralExtractionAssessment if thread['id'].startswith(('gmail-','sample-')) else ExtractionAssessment
 
 
+def source_constrained_schema(thread,messages):
+    """Constrain generation, without repairing or replacing model citations."""
+    schema=extraction_schema(thread).model_json_schema()
+    ids=[message.id for message in messages]
+    if not ids:return schema
+    for definition in [schema,*schema.get('$defs',{}).values()]:
+        for name,field in definition.get('properties',{}).items():
+            if name=='message_id':field['enum']=ids
+            elif name in ['evidence_message_ids','non_substantive_message_ids']:
+                field['items']['enum']=ids
+            elif name=='proposal_message_id':
+                for branch in field['anyOf']:
+                    if branch.get('type')=='string':branch['enum']=ids
+    return schema
+
+
 class OllamaAnalyzer:
     extraction_contract=EXTRACTION_CONTRACT
     provider='ollama'
@@ -134,10 +150,11 @@ class OllamaAnalyzer:
     async def analyze(self,thread,messages):
         start=time.monotonic()
         self.rejected_outputs=[];self.response_diagnostics=[];feedback=''
+        schema=source_constrained_schema(thread,messages)
         async with asyncio.timeout(self.settings.timeout):
             for generation in range(2):
                 payload={'model':self.model,'messages':[{'role':'system','content':system_prompt(thread)+feedback},
-                         {'role':'user','content':model_input(thread,messages)+'\nReturn JSON matching this schema:\n'+json.dumps(extraction_schema(thread).model_json_schema())}], 'format':extraction_schema(thread).model_json_schema(),
+                         {'role':'user','content':model_input(thread,messages)+'\nReturn JSON matching this schema:\n'+json.dumps(schema)}], 'format':schema,
                          'stream':False,'keep_alive':'20m','options':{'temperature':0,'num_ctx':8192,'num_predict':3000}}
                 if self.model.startswith('qwen'): payload['think']=False
                 async with httpx.AsyncClient(timeout=self.settings.timeout) as client:
@@ -227,7 +244,8 @@ async def glm_request_slot(timeout):
         if path.exists():
             try:remaining=float(json.loads(path.read_text(encoding='utf-8'))['until'])-time.time()
             except (OSError,ValueError,KeyError,TypeError):remaining=0
-            if remaining>0:await asyncio.sleep(remaining)
+            if remaining>0:
+                raise ValueError(f'GLM is cooling down after an unfinished request ({remaining:.0f} seconds remaining). No API request was sent. Retry later.')
         try:yield
         except (httpx.ReadTimeout,asyncio.CancelledError):
             # Applies to analysis, drafts, and evaluator processes using this slot.

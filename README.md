@@ -53,6 +53,7 @@ Provider selection lives in `.env`; restart the server after changing it. For ex
 MODEL_PROVIDER=glm
 GLM_MODEL=glm-4.7-flash
 GLM_API_KEY=your-key
+GLM_THINKING=disabled
 ANALYSIS_FALLBACK_PROVIDER=ollama
 OLLAMA_MODEL=qwen3.5:4b
 PRIMARY_ANALYSIS_BUDGET_SECONDS=90
@@ -62,6 +63,17 @@ FALLBACK_TIMEOUT_SECONDS=300
 Saved assessments can be browsed without a running model. Live analysis and reply generation require the corresponding provider to be available. For frontend development, run `npm run dev` inside `frontend` alongside the FastAPI server; Vite proxies API requests to port 8000.
 
 With no model configured, choose **Browse saved runs** from the availability notice or information menu. The library includes completed runs across models; the normal inbox reuses results matching its configured extraction or recorded fallback. Each assessment shows its actual model and run time. **Analyze again** requests fresh inference; bulk analysis can reuse matching results.
+
+## Deploy on Railway
+
+The root `Dockerfile` builds React and packages it with FastAPI and the current public saved-run bundles. `railway.json` selects Docker and checks `/api/health`. The server listens on Railway's `PORT`, with one worker for the persisted analysis queue.
+
+1. Push these files and deploy from the repository root. Leave custom build and start commands unset; the Dockerfile supplies both.
+2. Attach a Railway volume at **`/app/runtime`** and keep **one replica**. It holds SQLite and queue state across deployments; never upload your local `runtime/` or `.env`.
+3. Set `MODEL_PROVIDER=glm`, `GLM_MODEL=glm-4.7-flash`, `GLM_THINKING=disabled`, `GLM_MAX_OUTPUT_TOKENS=8192` and `APP_TIMEZONE=Asia/Kolkata`. Leave `ANALYSIS_FALLBACK_PROVIDER` empty: local Ollama is unavailable on Railway.
+4. Generate a domain under service **Settings → Networking**. Use target port **8080** unless you set a different `PORT`.
+
+Saved assessments work without an API key through **Browse saved runs**. Live GLM analysis requires `GLM_API_KEY` in Railway Variables. The application is a shared workspace without authentication; restrict access before adding live keys or private mail. Desktop Gmail OAuth remains a local workflow.
 
 ## Evaluation
 

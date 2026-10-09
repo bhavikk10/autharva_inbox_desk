@@ -175,8 +175,9 @@ def content_hash(messages: list[Message], provider: str, model: str, context: di
 
 
 def evidence_text(text: str) -> str:
-    """Ignore whitespace formatting only; keep the source's words and punctuation."""
-    return ' '.join(text.casefold().split())
+    """Ignore whitespace and smart-quote typography; preserve words and other punctuation."""
+    quotes=str.maketrans({'\u2018':"'",'\u2019':"'",'\u201c':'"','\u201d':'"'})
+    return ' '.join(text.translate(quotes).casefold().split())
 
 
 def validate_evidence(data: Assessment, messages: list[Message], *, require_grounded=False) -> None:
@@ -187,7 +188,7 @@ def validate_evidence(data: Assessment, messages: list[Message], *, require_grou
     def check_date(phrase):
         if phrase is None: return
         check([phrase.message_id])
-        if phrase.expression.casefold() not in known[phrase.message_id].body.casefold():
+        if not evidence_text(phrase.expression) or evidence_text(phrase.expression) not in evidence_text(known[phrase.message_id].body):
             raise ValueError(f'Date expression {phrase.expression!r} must be verbatim in message {phrase.message_id}; calculated dates or wrong source IDs are rejected.')
     for entry in [*data.open_items, *data.resolved_items, *data.recommendations]:
         check(entry.evidence_message_ids)
@@ -196,7 +197,7 @@ def validate_evidence(data: Assessment, messages: list[Message], *, require_grou
         if quote is None: return
         check([quote.message_id])
         if not evidence_text(quote.quote) or evidence_text(quote.quote) not in evidence_text(known[quote.message_id].body):
-            raise ValueError('Evidence quote must match its source message wording (whitespace differences are allowed).')
+            raise ValueError('Evidence quote must match its source message wording (whitespace and smart-quote differences are allowed).')
         if quote.message_id not in entry.evidence_message_ids:
             raise ValueError('Evidence quote must reference the obligation evidence IDs.')
     for entry in [*data.open_items,*data.resolved_items]:
@@ -221,7 +222,7 @@ def validate_evidence(data: Assessment, messages: list[Message], *, require_grou
         if isinstance(entry,ResolvedItem):
             check([entry.resolution_evidence.message_id])
             if not evidence_text(entry.resolution_evidence.quote) or evidence_text(entry.resolution_evidence.quote) not in evidence_text(known[entry.resolution_evidence.message_id].body):
-                raise ValueError('Resolution quote must match its source message wording (whitespace differences are allowed).')
+                raise ValueError('Resolution quote must match its source message wording (whitespace and smart-quote differences are allowed).')
             if known[entry.resolution_evidence.message_id].sent_at < known[entry.action_evidence.message_id].sent_at:
                 raise ValueError('An obligation cannot be resolved before it was created.')
     check_date(data.deferral)
