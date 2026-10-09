@@ -1,0 +1,22 @@
+{
+  "desktop_viewport": [
+    1198,
+    668
+  ],
+  "workspace_height_before_provider_notice": 475.2,
+  "no_page_footer": true,
+  "no_horizontal_overflow": true,
+  "wheel_scroll": {
+    "inbox_scroll_top": 650.4,
+    "detail_scroll_top": 913.6
+  },
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "mobile_messages": 6,
+  "mobile_final_action_bottom": 796.9,
+  "model": "gemini-2.5-flash",
+  "model_access_error": 404,
+  "gmail_oauth": "pending user credentials and authorization"
+}

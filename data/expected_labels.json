@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "authorship": "Policy-derived expectations authored before model runs; the five held-out labels were reviewed by the user before held-out inference. Not production ground truth.",
+  "human_reviewed": true,
+  "human_review_note": "User confirmed the five held-out expectations in chat before held-out inference. Development labels remain policy-derived.",
+  "as_of": "2026-10-09T18:00:00+05:30",
+  "cases": [
+    {"id":"meridian","split":"development","tier":"T1","reason":"Important SCIM ask remains unanswered beyond 48 hours."},
+    {"id":"northstar","split":"development","tier":"T1","reason":"Material explicit Friday legal commitment missed after 17:00."},
+    {"id":"kinetic","split":"development","tier":"T1","reason":"Explicit urgent contract request due today."},
+    {"id":"evergreen","split":"development","tier":"T3","reason":"High value, but procurement has explicitly asked us to wait until next week."},
+    {"id":"harbor","split":"development","tier":"T2","reason":"Proposal awaiting a substantive response for seven days."},
+    {"id":"atlas","split":"development","tier":"T1","reason":"Important promised security packet overdue; acknowledgement does not fulfill it."},
+    {"id":"solstice","split":"development","tier":"T3","reason":"Future meeting confirmed with no other obligation."},
+    {"id":"juniper","split":"development","tier":"T4","reason":"Won and onboarding complete, no open requests."},
+    {"id":"cobalt","split":"development","tier":"T4","reason":"Explicit permanent rejection with no open obligations."},
+    {"id":"signal","split":"development","tier":"T4","reason":"Newsletter is non-sales noise."},
+    {"id":"people","split":"development","tier":"T4","reason":"Internal HR email is unrelated to sales."},
+    {"id":"pine","split":"development","tier":"T3","reason":"Three unanswered outbound messages; pause rather than chase."},
+    {"id":"tessera","split":"development","tier":"T3","reason":"Explicit deferral until October 15."},
+    {"id":"valence","split":"development","tier":"T1","reason":"Urgent renewal-sensitive security obligation due Friday is overdue."},
+    {"id":"mosaic","split":"development","tier":"T2","reason":"Recent unresolved pricing request without urgency or deadline."},
+    {"id":"lumen","split":"held_out","tier":"T1","reason":"Important DPA request remains unanswered beyond 48 hours despite residency answer."},
+    {"id":"orbit","split":"held_out","tier":"T1","reason":"Seller promised important checklist tomorrow; it is overdue."},
+    {"id":"cedar","split":"held_out","tier":"T3","reason":"Respect explicit month-end deferral."},
+    {"id":"drift","split":"held_out","tier":"T4","reason":"Resolved personal support issue with no commercial relevance."},
+    {"id":"horizon","split":"held_out","tier":"T3","reason":"Vague exploratory interest without an obligation; may advise clarification."}
+  ],
+  "clock_checks": [
+    {"id":"northstar","as_of":"2026-10-08T15:00:00+05:30","tier":"T3"},
+    {"id":"northstar","as_of":"2026-10-09T10:00:00+05:30","tier":"T2"},
+    {"id":"northstar","as_of":"2026-10-09T18:00:00+05:30","tier":"T1"}
+  ]
+}

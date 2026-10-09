@@ -1,0 +1,539 @@
+{
+  "origin": "actual-model-runs",
+  "prompt_version": "2",
+  "schema_version": "1",
+  "runs": [
+    {
+      "cache_key": "bbb72d1992d6ef70d05da1baf4c0e88e69be9bea6bd6f82366b3bb7ad6ac720b",
+      "thread_id": "long-edge-dahlia",
+      "provider": "glm",
+      "model": "glm-4.7-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"high\",\"summary\":\"Alex Morgan must deliver the completed security questionnaire by Friday at 7 pm IST to satisfy the buyer's procurement requirement.\",\"reason\":\"Alex Morgan must deliver the completed questionnaire by Friday at 7 pm IST to satisfy the buyer's procurement requirement.\",\"blockers\":[\"Pending delivery of the completed security questionnaire.\"],\"open_items\":[{\"description\":\"Send the completed security questionnaire by Friday at 7 pm IST.\",\"kind\":\"commitment\",\"owner\":\"us\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-dahlia-m4\",\"long-edge-dahlia-m6\"],\"deadline\":{\"expression\":\"Friday at 7 pm IST\",\"message_id\":\"long-edge-dahlia-m4\"}}],\"recommendations\":[{\"description\":\"Ensure the security team completes the final sections of the questionnaire before the agreed Friday at 7 pm IST deadline.\",\"evidence_message_ids\":[\"long-edge-dahlia-m4\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null}",
+      "raw_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"high\",\"summary\":\"Alex Morgan must deliver the completed security questionnaire by Friday at 7 pm IST to satisfy the buyer's procurement requirement.\",\"reason\":\"Alex Morgan must deliver the completed questionnaire by Friday at 7 pm IST to satisfy the buyer's procurement requirement.\",\"blockers\":[\"Pending delivery of the completed security questionnaire.\"],\"open_items\":[{\"description\":\"Send the completed security questionnaire by Friday at 7 pm IST.\",\"kind\":\"commitment\",\"owner\":\"us\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-dahlia-m4\",\"long-edge-dahlia-m6\"],\"deadline\":{\"expression\":\"Friday at 7 pm IST\",\"message_id\":\"long-edge-dahlia-m4\"}}],\"recommendations\":[{\"description\":\"Ensure the security team completes the final sections of the questionnaire before the agreed Friday at 7 pm IST deadline.\",\"evidence_message_ids\":[\"long-edge-dahlia-m4\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null}",
+      "created_at": "2026-10-06T17:52:30.041886+00:00",
+      "duration_ms": 41437,
+      "input_messages": [
+        {
+          "id": "long-edge-dahlia-m1",
+          "sender": "Sana Ahmed",
+          "direction": "inbound",
+          "body": "Our security reviewer needs the completed questionnaire to approve the purchase. Please return answers in the attached template and confirm when we should expect the document. This is the last remaining requirement before procurement releases the purchase order.",
+          "sent_at": "2026-10-06T09:00:00+05:30",
+          "attachments": [
+            "review-template.xlsx"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-dahlia-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "I have received the questionnaire template and will coordinate the answers with our security team. We are checking the final sections against your deployment. The completed questionnaire is not attached to this acknowledgement, so the requirement remains open.",
+          "sent_at": "2026-10-06T12:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-dahlia-m3",
+          "sender": "Sana Ahmed",
+          "direction": "inbound",
+          "body": "The reviewer can accommodate an evening delivery on Friday because our procurement system stays open later that day. We still need the completed questionnaire itself. Please confirm a specific delivery time so the reviewer can plan the approval work.",
+          "sent_at": "2026-10-07T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-dahlia-m4",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "I will send the completed security questionnaire Friday at 7 pm IST. That is our confirmed delivery commitment for the document needed to release the purchase order. We are using your original template and completing the remaining security answers.",
+          "sent_at": "2026-10-07T13:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-dahlia-m5",
+          "sender": "Sana Ahmed",
+          "direction": "inbound",
+          "body": "Friday at seven in the evening, India time, works for our reviewer. We have recorded that delivery time and do not need the questionnaire earlier. The purchase approval will wait for the promised document within that agreed evening window.",
+          "sent_at": "2026-10-08T11:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-dahlia-m6",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "The security team is checking the answers before our agreed evening delivery. I am keeping the Friday at seven commitment, and this update does not include the completed questionnaire. Your reviewer can continue to expect the document at that time.",
+          "sent_at": "2026-10-09T15:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Dahlia Labs",
+        "subject": "Explicit evening deadline remains in its window",
+        "deal_value": 76000,
+        "output_contract": "glm-json-contract-v3-reason"
+      }
+    },
+    {
+      "cache_key": "94daf3520d4219132a18f3cdee36e211b43eca792fc5baf193697710cfdf4f00",
+      "thread_id": "long-edge-finch",
+      "provider": "glm",
+      "model": "glm-4.7-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"medium\",\"summary\":\"Alex Morgan needs to send a calendar invitation for an introductory call next Tuesday afternoon. Avery Morgan has no other questions.\",\"reason\":\"Alex Morgan must send the calendar invitation for the introductory call next Tuesday afternoon. Avery Morgan has no other questions.\",\"blockers\":[],\"open_items\":[{\"description\":\"Send a calendar invitation for the introductory call next Tuesday afternoon.\",\"kind\":\"ask\",\"owner\":\"us\",\"important\":false,\"material\":false,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-finch-m3\",\"long-edge-finch-m4\",\"long-edge-finch-m5\",\"long-edge-finch-m6\"],\"deadline\":{\"expression\":\"tomorrow\",\"message_id\":\"long-edge-finch-m4\"}}],\"recommendations\":[{\"description\":\"Send the calendar invitation for the introductory call next Tuesday afternoon.\",\"evidence_message_ids\":[\"long-edge-finch-m3\",\"long-edge-finch-m4\",\"long-edge-finch-m5\",\"long-edge-finch-m6\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[\"long-edge-finch-m5\"],\"proposal_message_id\":null,\"deferral\":null}",
+      "raw_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"medium\",\"summary\":\"Alex Morgan needs to send a calendar invitation for an introductory call next Tuesday afternoon. Avery Morgan has no other questions.\",\"reason\":\"Alex Morgan must send the calendar invitation for the introductory call next Tuesday afternoon. Avery Morgan has no other questions.\",\"blockers\":[],\"open_items\":[{\"description\":\"Send a calendar invitation for the introductory call next Tuesday afternoon.\",\"kind\":\"ask\",\"owner\":\"us\",\"important\":false,\"material\":false,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-finch-m3\",\"long-edge-finch-m4\",\"long-edge-finch-m5\",\"long-edge-finch-m6\"],\"deadline\":{\"expression\":\"tomorrow\",\"message_id\":\"long-edge-finch-m4\"}}],\"recommendations\":[{\"description\":\"Send the calendar invitation for the introductory call next Tuesday afternoon.\",\"evidence_message_ids\":[\"long-edge-finch-m3\",\"long-edge-finch-m4\",\"long-edge-finch-m5\",\"long-edge-finch-m6\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[\"long-edge-finch-m5\"],\"proposal_message_id\":null,\"deferral\":null}",
+      "created_at": "2026-10-06T17:52:54.300924+00:00",
+      "duration_ms": 23781,
+      "input_messages": [
+        {
+          "id": "long-edge-finch-m1",
+          "sender": "Avery Morgan",
+          "direction": "inbound",
+          "body": "We are exploring your platform and would like a short introductory call with our designers. Tuesday afternoon next week would suit the team. There is no purchase approval or deadline involved; we only want to understand the basic workflow.",
+          "sent_at": "2026-10-06T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-finch-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Tuesday afternoon next week works for an introductory call, and I can demonstrate the basic designer workflow. We can keep the session informal because you are still exploring options. I have attached the overview so your team can prepare.",
+          "sent_at": "2026-10-06T12:00:00+05:30",
+          "attachments": [
+            "overview.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-finch-m3",
+          "sender": "Avery Morgan",
+          "direction": "inbound",
+          "body": "The overview is useful and answers our preliminary questions. Could you send a calendar invitation for the introductory call? This is simply to reserve the time for our designers; it is not blocking a purchase or security approval.",
+          "sent_at": "2026-10-07T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-finch-m4",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "I'll send the calendar invitation tomorrow for the introductory call next Tuesday afternoon. It will include the meeting link and a short agenda. I understand this is a routine scheduling task for your team rather than a commercial approval requirement.",
+          "sent_at": "2026-10-07T13:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-finch-m5",
+          "sender": "Avery Morgan",
+          "direction": "inbound",
+          "body": "Thanks for arranging the introduction. We have the overview and no other questions, but the calendar invitation has not arrived yet. Please keep that scheduling request open so the designers can reserve the time using the meeting link.",
+          "sent_at": "2026-10-08T15:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-finch-m6",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "I've checked the attendee list and confirmed that Tuesday afternoon remains suitable for the introduction. The invitation itself has not been sent yet. This update contains neither a calendar attachment nor a meeting link, so the scheduling task remains open.",
+          "sent_at": "2026-10-09T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Finch Creative",
+        "subject": "Routine calendar invitation was forgotten",
+        "deal_value": 19000,
+        "output_contract": "glm-json-contract-v3-reason"
+      }
+    },
+    {
+      "cache_key": "c1a3067f84109f67ca75c4241ace095dfb7cb7a4daa35e2aff08c9aad6e4cebc",
+      "thread_id": "long-edge-indigo",
+      "provider": "glm",
+      "model": "glm-4.7-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"unknown\",\"summary\":\"Alex sent a pilot proposal and three follow-ups. Tariq has not responded with a decision or questions.\",\"reason\":\"Alex sent the pilot proposal and three follow-ups. Tariq has not responded with a decision or questions.\",\"blockers\":[],\"open_items\":[{\"description\":\"Receive a decision or questions from the partner group regarding the pilot proposal.\",\"kind\":\"ask\",\"owner\":\"prospect\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-indigo-m4\",\"long-edge-indigo-m5\",\"long-edge-indigo-m6\",\"long-edge-indigo-m7\"],\"deadline\":null}],\"recommendations\":[{\"description\":\"Pause outreach to the partner group until a response is received.\",\"evidence_message_ids\":[\"long-edge-indigo-m7\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":\"long-edge-indigo-m4\",\"deferral\":null}",
+      "raw_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"unknown\",\"summary\":\"Alex sent a pilot proposal and three follow-ups. Tariq has not responded with a decision or questions.\",\"reason\":\"Alex sent the pilot proposal and three follow-ups. Tariq has not responded with a decision or questions.\",\"blockers\":[],\"open_items\":[{\"description\":\"Receive a decision or questions from the partner group regarding the pilot proposal.\",\"kind\":\"ask\",\"owner\":\"prospect\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-indigo-m4\",\"long-edge-indigo-m5\",\"long-edge-indigo-m6\",\"long-edge-indigo-m7\"],\"deadline\":null}],\"recommendations\":[{\"description\":\"Pause outreach to the partner group until a response is received.\",\"evidence_message_ids\":[\"long-edge-indigo-m7\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":\"long-edge-indigo-m4\",\"deferral\":null}",
+      "created_at": "2026-10-06T17:57:25.920419+00:00",
+      "duration_ms": 90429,
+      "input_messages": [
+        {
+          "id": "long-edge-indigo-m1",
+          "sender": "Tariq Osman",
+          "direction": "inbound",
+          "body": "Our consultants are considering an identity platform for a small pilot. Can you confirm whether the evaluation supports guest users as well as staff? We want to understand that basic capability before discussing pricing or arranging a partner review.",
+          "sent_at": "2026-10-01T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-indigo-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "The evaluation supports both staff and guest users through access roles. The attached overview explains the available boundaries and administrative controls. This answers your capability question, and we can provide a pilot offer if your partners want to review one.",
+          "sent_at": "2026-10-01T12:00:00+05:30",
+          "attachments": [
+            "guest-overview.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-indigo-m3",
+          "sender": "Tariq Osman",
+          "direction": "inbound",
+          "body": "The overview answers our guest access question. Please send a forty user pilot proposal with pricing and duration for the partner group. We've not scheduled its review meeting, so I cannot promise a decision date or a specific next step.",
+          "sent_at": "2026-10-01T15:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-indigo-m4",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "The requested forty user pilot proposal is attached with pricing, duration, and the included onboarding session. Your partners have the complete offer needed for a review. Please share any specific questions if the proposal needs clarification during their discussion.",
+          "sent_at": "2026-10-02T11:00:00+05:30",
+          "attachments": [
+            "pilot-proposal.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-indigo-m5",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "My first follow up on the pilot proposal is to check whether your partners have had an opportunity to review the offer. The pricing and duration remain unchanged. We have not received a decision or question since sending the proposal.",
+          "sent_at": "2026-10-04T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-indigo-m6",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Checking once more on the pilot offer for your partner group. We still have not received a decision, review result, or new question. The full proposal remains in this thread, and there is no separate document pending from our side.",
+          "sent_at": "2026-10-06T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-indigo-m7",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "This is my third follow up on the pilot proposal before pausing further outreach. We've not heard a substantive response from the partner group. You have the offer, so please reconnect whenever your review meeting or purchase plans become clearer.",
+          "sent_at": "2026-10-08T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Indigo Partners",
+        "subject": "Three unanswered follow-ups warrant a pause",
+        "deal_value": 29000,
+        "output_contract": "glm-json-contract-v3-reason"
+      }
+    },
+    {
+      "cache_key": "2e3d719d416672836a100fec6cb1952ac4c1aade5aedd917852b33aebb8caf84",
+      "thread_id": "long-edge-kestrel",
+      "provider": "glm",
+      "model": "glm-4.7-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"deferred\",\"buyer_intent\":\"unknown\",\"summary\":\"The prospect has paused commercial discussions until October 9. The proposal was sent and accepted. No decision or new request exists yet.\",\"reason\":\"We must wait until October 9 to restart discussions. The prospect paused commercial conversations and has no pending questions.\",\"blockers\":[\"Prospect unavailable for commercial conversations until October 9\"],\"open_items\":[{\"description\":\"Restart proposal discussion\",\"kind\":\"ask\",\"owner\":\"us\",\"important\":true,\"material\":false,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-kestrel-m1\",\"long-edge-kestrel-m3\",\"long-edge-kestrel-m4\"],\"deadline\":{\"expression\":\"October 9\",\"message_id\":\"long-edge-kestrel-m4\"}}],\"recommendations\":[{\"description\":\"Schedule a follow-up contact on October 9 to restart the proposal discussion.\",\"evidence_message_ids\":[\"long-edge-kestrel-m4\",\"long-edge-kestrel-m6\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[\"long-edge-kestrel-m5\",\"long-edge-kestrel-m6\"],\"proposal_message_id\":\"long-edge-kestrel-m2\",\"deferral\":{\"expression\":\"until October 9\",\"message_id\":\"long-edge-kestrel-m3\"}}",
+      "raw_json": "{\"is_sales_related\":true,\"lifecycle\":\"deferred\",\"buyer_intent\":\"unknown\",\"summary\":\"The prospect has paused commercial discussions until October 9. The proposal was sent and accepted. No decision or new request exists yet.\",\"reason\":\"We must wait until October 9 to restart discussions. The prospect paused commercial conversations and has no pending questions.\",\"blockers\":[\"Prospect unavailable for commercial conversations until October 9\"],\"open_items\":[{\"description\":\"Restart proposal discussion\",\"kind\":\"ask\",\"owner\":\"us\",\"important\":true,\"material\":false,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-kestrel-m1\",\"long-edge-kestrel-m3\",\"long-edge-kestrel-m4\"],\"deadline\":{\"expression\":\"October 9\",\"message_id\":\"long-edge-kestrel-m4\"}}],\"recommendations\":[{\"description\":\"Schedule a follow-up contact on October 9 to restart the proposal discussion.\",\"evidence_message_ids\":[\"long-edge-kestrel-m4\",\"long-edge-kestrel-m6\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[\"long-edge-kestrel-m5\",\"long-edge-kestrel-m6\"],\"proposal_message_id\":\"long-edge-kestrel-m2\",\"deferral\":{\"expression\":\"until October 9\",\"message_id\":\"long-edge-kestrel-m3\"}}",
+      "created_at": "2026-10-06T17:59:08.786888+00:00",
+      "duration_ms": 102636,
+      "input_messages": [
+        {
+          "id": "long-edge-kestrel-m1",
+          "sender": "Emma Doyle",
+          "direction": "inbound",
+          "body": "We want to consider your identity platform once our planning meeting is complete. Please send the annual proposal with the seat count discussed earlier. We need that document for planning, but are not ready to make a purchase decision yet.",
+          "sent_at": "2026-10-01T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-kestrel-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "The annual proposal is attached with the requested seat count, pricing, and implementation allowance. It includes everything discussed during the introduction. Please use this version for your planning meeting; we can revisit the opportunity once your internal priorities are clearer.",
+          "sent_at": "2026-10-01T13:00:00+05:30",
+          "attachments": [
+            "annual-proposal.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-kestrel-m3",
+          "sender": "Emma Doyle",
+          "direction": "inbound",
+          "body": "The proposal contains all the information requested for planning. Please wait until October 9 before restarting the proposal discussion. We'll be unavailable for commercial conversations before that date, and there are no outstanding questions or deliverables for your team now.",
+          "sent_at": "2026-10-02T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-kestrel-m4",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "I've recorded October 9 as the agreed date for restarting the proposal discussion. We will respect the waiting period until then. The annual offer remains available, and I understand that you have no pending questions or requested documents from us.",
+          "sent_at": "2026-10-02T14:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-kestrel-m5",
+          "sender": "Emma Doyle",
+          "direction": "inbound",
+          "body": "Our planning timetable remains unchanged, including the October 9 date for restarting commercial discussions. The annual proposal has all the information we need. This is a status confirmation, with no decision or new request to share before that agreed date.",
+          "sent_at": "2026-10-07T11:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-kestrel-m6",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Thanks for confirming the planning timetable. We have kept the proposal available while respecting the agreed waiting period. I have recorded that no decision or additional material is expected before October 9, when the existing pause on commercial discussions ends.",
+          "sent_at": "2026-10-08T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Kestrel Automotive",
+        "subject": "Agreed recontact date has arrived",
+        "deal_value": 68000,
+        "output_contract": "glm-json-contract-v3-reason"
+      }
+    },
+    {
+      "cache_key": "0547a21b169cb9998b3ceecc30c83b9c70abf030c63ea51990682902759f6bea",
+      "thread_id": "long-edge-larch",
+      "provider": "glm",
+      "model": "glm-4.7-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"medium\",\"summary\":\"The prospect needs a board decision but cannot provide a date. We have no outstanding deliverables.\",\"reason\":\"Nora Quinn must decide after the unconfirmed board meeting. We have no outstanding deliverables.\",\"blockers\":[\"Unconfirmed board meeting date\"],\"open_items\":[{\"description\":\"Prospect to send purchase decision after board meeting\",\"kind\":\"commitment\",\"owner\":\"prospect\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-larch-m3\",\"long-edge-larch-m5\"],\"deadline\":{\"expression\":\"after the board meeting\",\"message_id\":\"long-edge-larch-m3\"}}],\"recommendations\":[{\"description\":\"Wait for the prospect to confirm the board meeting date or receive the decision.\",\"evidence_message_ids\":[\"long-edge-larch-m3\",\"long-edge-larch-m5\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":\"long-edge-larch-m2\",\"deferral\":null}",
+      "raw_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"medium\",\"summary\":\"The prospect needs a board decision but cannot provide a date. We have no outstanding deliverables.\",\"reason\":\"Nora Quinn must decide after the unconfirmed board meeting. We have no outstanding deliverables.\",\"blockers\":[\"Unconfirmed board meeting date\"],\"open_items\":[{\"description\":\"Prospect to send purchase decision after board meeting\",\"kind\":\"commitment\",\"owner\":\"prospect\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-larch-m3\",\"long-edge-larch-m5\"],\"deadline\":{\"expression\":\"after the board meeting\",\"message_id\":\"long-edge-larch-m3\"}}],\"recommendations\":[{\"description\":\"Wait for the prospect to confirm the board meeting date or receive the decision.\",\"evidence_message_ids\":[\"long-edge-larch-m3\",\"long-edge-larch-m5\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":\"long-edge-larch-m2\",\"deferral\":null}",
+      "created_at": "2026-10-06T18:00:01.255087+00:00",
+      "duration_ms": 51942,
+      "input_messages": [
+        {
+          "id": "long-edge-larch-m1",
+          "sender": "Nora Quinn",
+          "direction": "inbound",
+          "body": "Our technical evaluation is complete and the purchasing team needs a final enterprise proposal for the board papers. Please send the agreed pricing and deployment scope together. The board must approve the purchase before we can authorize a signing process.",
+          "sent_at": "2026-10-05T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-larch-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "The final enterprise proposal is attached with the agreed pricing and deployment scope in one document. It includes the implementation assumptions already reviewed by your technical team. This supplies the complete commercial material needed for the board papers.",
+          "sent_at": "2026-10-05T13:00:00+05:30",
+          "attachments": [
+            "enterprise-proposal.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-larch-m3",
+          "sender": "Nora Quinn",
+          "direction": "inbound",
+          "body": "The proposal contains everything required for the board papers. I will send our purchase decision after the board meeting, but its date is not confirmed yet. We cannot specify a calendar deadline, and there are no requests for your team.",
+          "sent_at": "2026-10-06T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-larch-m4",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Thanks, Nora. I have recorded the decision as conditional on the board meeting rather than assuming a calendar date. The proposal remains with your purchasing team. We understand that there is no commercial document needed before the board considers it.",
+          "sent_at": "2026-10-06T14:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-larch-m5",
+          "sender": "Nora Quinn",
+          "direction": "inbound",
+          "body": "The board meeting date remains unconfirmed, so we cannot provide a calendar deadline for the purchase decision. Our promise to send the decision after that meeting is unchanged. We have not held the meeting or reached an approval decision yet.",
+          "sent_at": "2026-10-08T11:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-larch-m6",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "We'll leave the proposal with your board process while the meeting date is being confirmed. I've not assumed that the meeting occurred or that a decision is overdue. The agreed commercial scope is unchanged, with no outstanding deliverable from us.",
+          "sent_at": "2026-10-09T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Larch Aerospace",
+        "subject": "Conditional board approval without a known meeting date",
+        "deal_value": 163000,
+        "output_contract": "glm-json-contract-v3-reason"
+      }
+    },
+    {
+      "cache_key": "8affdfec52d27ef925ed24c2c873a894628f1bb93c411480c7b4a61699f75e79",
+      "thread_id": "long-edge-mallow",
+      "provider": "glm",
+      "model": "glm-4.7-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"high\",\"summary\":\"Mallow International legal team is reviewing the subscription agreement. The prospect will decide by Friday at 5 pm PST.\",\"reason\":\"Prospect Julia Stein will decide by Friday at 5 pm PST. We provided the agreement. No further action is required from us.\",\"blockers\":[\"Legal review pending\"],\"open_items\":[{\"description\":\"Prospect to send approval decision by Friday at 5 pm PST\",\"kind\":\"commitment\",\"owner\":\"prospect\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-mallow-m3\",\"long-edge-mallow-m5\"],\"deadline\":{\"expression\":\"Friday at 5 pm PST\",\"message_id\":\"long-edge-mallow-m3\"}}],\"recommendations\":[{\"description\":\"Wait for the prospect's explicit approval decision by the stated deadline.\",\"evidence_message_ids\":[\"long-edge-mallow-m3\",\"long-edge-mallow-m5\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[\"long-edge-mallow-m4\",\"long-edge-mallow-m6\"],\"proposal_message_id\":null,\"deferral\":null}",
+      "raw_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"high\",\"summary\":\"Mallow International legal team is reviewing the subscription agreement. The prospect will decide by Friday at 5 pm PST.\",\"reason\":\"Prospect Julia Stein will decide by Friday at 5 pm PST. We provided the agreement. No further action is required from us.\",\"blockers\":[\"Legal review pending\"],\"open_items\":[{\"description\":\"Prospect to send approval decision by Friday at 5 pm PST\",\"kind\":\"commitment\",\"owner\":\"prospect\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-mallow-m3\",\"long-edge-mallow-m5\"],\"deadline\":{\"expression\":\"Friday at 5 pm PST\",\"message_id\":\"long-edge-mallow-m3\"}}],\"recommendations\":[{\"description\":\"Wait for the prospect's explicit approval decision by the stated deadline.\",\"evidence_message_ids\":[\"long-edge-mallow-m3\",\"long-edge-mallow-m5\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[\"long-edge-mallow-m4\",\"long-edge-mallow-m6\"],\"proposal_message_id\":null,\"deferral\":null}",
+      "created_at": "2026-10-06T18:00:54.314161+00:00",
+      "duration_ms": 52850,
+      "input_messages": [
+        {
+          "id": "long-edge-mallow-m1",
+          "sender": "Julia Stein",
+          "direction": "inbound",
+          "body": "Our legal reviewer needs the subscription agreement to decide whether we can approve the purchase. Please send the updated terms reflecting the liability limit we discussed. The review is based overseas, so its timing may differ from your local office.",
+          "sent_at": "2026-10-05T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-mallow-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "The updated subscription agreement is attached with the agreed liability limit and the unchanged annual pricing. I have highlighted the revised terms for your reviewer. This delivers the complete signing document requested for legal approval of the purchase.",
+          "sent_at": "2026-10-05T13:00:00+05:30",
+          "attachments": [
+            "updated-agreement.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-mallow-m3",
+          "sender": "Julia Stein",
+          "direction": "inbound",
+          "body": "The agreement contains all the requested changes, and legal is reviewing it. I will send our approval decision Friday at 5 pm PST. That decision is the last commercial approval before signing; there are no further requests for your team.",
+          "sent_at": "2026-10-06T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-mallow-m4",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Thanks for confirming the legal decision window. I have recorded the explicit PST timezone from your message rather than converting it into our local deadline. The completed agreement remains available, and there is no signing document pending from our team.",
+          "sent_at": "2026-10-06T14:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-mallow-m5",
+          "sender": "Julia Stein",
+          "direction": "inbound",
+          "body": "Legal has the completed agreement and the decision window remains Friday at five in the afternoon PST. We've not approved the purchase yet. This update changes neither the timezone nor the commitment, and introduces no new request for your team.",
+          "sent_at": "2026-10-08T11:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-mallow-m6",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "The completed agreement is ready while your legal reviewer finishes the decision in the timezone you specified. We've not received an approval result yet. I've preserved your stated timezone so the timing can be clarified before any overdue follow up.",
+          "sent_at": "2026-10-09T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Mallow International",
+        "subject": "Explicit foreign timezone requires clarification",
+        "deal_value": 99000,
+        "output_contract": "glm-json-contract-v3-reason"
+      }
+    },
+    {
+      "cache_key": "06e3361a637868787e3de24656062bc675fdc7c51b3ee76334dc76d97ebde238",
+      "thread_id": "long-edge-petal",
+      "provider": "glm",
+      "model": "glm-4.7-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"high\",\"summary\":\"Claire Dubois confirmed acceptance of the pricing and regional administration answers. The technical walkthrough is scheduled for October 13, and no further action is required before the meeting.\",\"reason\":\"Claire confirmed answers and accepted the walkthrough. No outstanding work exists before the October 13 session.\",\"blockers\":[],\"open_items\":[],\"recommendations\":[],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null}",
+      "raw_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"high\",\"summary\":\"Claire Dubois confirmed acceptance of the pricing and regional administration answers. The technical walkthrough is scheduled for October 13, and no further action is required before the meeting.\",\"reason\":\"Claire confirmed answers and accepted the walkthrough. No outstanding work exists before the October 13 session.\",\"blockers\":[],\"open_items\":[],\"recommendations\":[],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null}",
+      "created_at": "2026-10-06T18:01:26.216920+00:00",
+      "duration_ms": 31707,
+      "input_messages": [
+        {
+          "id": "long-edge-petal-m1",
+          "sender": "Claire Dubois",
+          "direction": "inbound",
+          "body": "Our group is evaluating identity management for two thousand users across regions. Please send enterprise pricing and confirm whether regional administrators can manage their own staff. These are the two questions needed before scheduling a technical walkthrough with our team.",
+          "sent_at": "2026-10-06T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-petal-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Enterprise pricing is attached for two thousand users, including the volume discount and implementation allowance. Regional administrators can manage assigned staff through scoped roles without accessing other regions. The permissions guide includes the configuration example relevant to your evaluation.",
+          "sent_at": "2026-10-06T13:00:00+05:30",
+          "attachments": [
+            "enterprise-pricing.pdf",
+            "regional-roles.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-petal-m3",
+          "sender": "Claire Dubois",
+          "direction": "inbound",
+          "body": "The pricing and regional administration answers are complete, and our team has accepted both. Could we book a technical walkthrough for October 13 at ten in the morning? We have no other requested material or open questions before that session.",
+          "sent_at": "2026-10-07T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-petal-m4",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "The technical walkthrough is booked for October 13 at ten in the morning, India time. The calendar invitation is attached and includes the regional administration agenda. Your team has already received the requested pricing and permissions documents for the evaluation.",
+          "sent_at": "2026-10-07T13:00:00+05:30",
+          "attachments": [
+            "technical-walkthrough.ics"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-petal-m5",
+          "sender": "Claire Dubois",
+          "direction": "inbound",
+          "body": "We have accepted the calendar invitation, and the regional administrators will attend the October 13 walkthrough. Our pricing and permissions questions remain resolved. The next step is simply attending the scheduled session, with no additional answer or document needed beforehand.",
+          "sent_at": "2026-10-08T11:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-petal-m6",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Thanks, Claire. The walkthrough remains scheduled with the same agenda and meeting link. We've the confirmed attendee list and will demonstrate the regional administration workflow during the session. All requested commercial and technical material has been supplied for your evaluation.",
+          "sent_at": "2026-10-09T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Petal Global",
+        "subject": "Large healthy opportunity with all questions answered",
+        "deal_value": 480000,
+        "output_contract": "glm-json-contract-v3-reason"
+      }
+    }
+  ]
+}

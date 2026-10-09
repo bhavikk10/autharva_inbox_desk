@@ -1,0 +1,10 @@
+fastapi>=0.121,<1
+uvicorn>=0.38,<1
+pydantic>=2.12,<3
+httpx>=0.28,<1
+python-dotenv>=1.1,<2
+google-genai>=1.45,<2
+google-auth-oauthlib>=1.2,<2
+tzdata>=2025.2
+tzlocal>=5.3,<6
+pytest>=9,<10

@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/gmailpanel.tsx","./src/queuepanel.tsx","./src/reviewtools.tsx","./src/savedrunspanel.tsx","./src/api.ts","./src/gmaillabels.ts","./src/inboxcontrols.ts","./src/main.tsx","./src/types.ts","./vite.config.ts"],"version":"5.9.3"}

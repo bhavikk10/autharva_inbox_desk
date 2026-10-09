@@ -1,0 +1,296 @@
+{
+  "origin": "actual-model-runs",
+  "prompt_version": "2",
+  "schema_version": "1",
+  "runs": [
+    {
+      "cache_key": "63c00f749d8eece753be0f680871a1843943e010c44e4250c3c9908af8938177",
+      "thread_id": "long-edge-dahlia",
+      "provider": "glm",
+      "model": "glm-4.7-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"high\",\"summary\":\"Alex Morgan must deliver the completed security questionnaire by Friday at 7 pm IST to satisfy the procurement requirement. The prospect has confirmed this deadline.\",\"reason\":\"The prospect, Sana Ahmed, explicitly requested the completed security questionnaire to release the purchase order. Alex Morgan committed to delivering it on Friday at 7 pm IST. The prospect has acknowledged this commitment and confirmed the delivery time. No other blockers exist.\",\"blockers\":[],\"open_items\":[{\"description\":\"Send the completed security questionnaire by Friday at 7 pm IST\",\"kind\":\"commitment\",\"owner\":\"us\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-dahlia-m4\",\"long-edge-dahlia-m5\"],\"deadline\":{\"expression\":\"Friday at 7 pm IST\",\"message_id\":\"long-edge-dahlia-m4\"}}],\"recommendations\":[{\"description\":\"Ensure the security questionnaire is completed and delivered by the agreed time to unblock the purchase order.\",\"evidence_message_ids\":[\"long-edge-dahlia-m4\",\"long-edge-dahlia-m5\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null}",
+      "raw_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"high\",\"summary\":\"Alex Morgan must deliver the completed security questionnaire by Friday at 7 pm IST to satisfy the procurement requirement. The prospect has confirmed this deadline.\",\"reason\":\"The prospect, Sana Ahmed, explicitly requested the completed security questionnaire to release the purchase order. Alex Morgan committed to delivering it on Friday at 7 pm IST. The prospect has acknowledged this commitment and confirmed the delivery time. No other blockers exist.\",\"blockers\":[],\"open_items\":[{\"description\":\"Send the completed security questionnaire by Friday at 7 pm IST\",\"kind\":\"commitment\",\"owner\":\"us\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-dahlia-m4\",\"long-edge-dahlia-m5\"],\"deadline\":{\"expression\":\"Friday at 7 pm IST\",\"message_id\":\"long-edge-dahlia-m4\"}}],\"recommendations\":[{\"description\":\"Ensure the security questionnaire is completed and delivered by the agreed time to unblock the purchase order.\",\"evidence_message_ids\":[\"long-edge-dahlia-m4\",\"long-edge-dahlia-m5\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null}",
+      "created_at": "2026-10-06T18:52:26.458496+00:00",
+      "duration_ms": 91949,
+      "input_messages": [
+        {
+          "id": "long-edge-dahlia-m1",
+          "sender": "Sana Ahmed",
+          "direction": "inbound",
+          "body": "Our security reviewer needs the completed questionnaire to approve the purchase. Please return answers in the attached template and confirm when we should expect the document. This is the last remaining requirement before procurement releases the purchase order.",
+          "sent_at": "2026-10-06T09:00:00+05:30",
+          "attachments": [
+            "review-template.xlsx"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-dahlia-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "I have received the questionnaire template and will coordinate the answers with our security team. We are checking the final sections against your deployment. The completed questionnaire is not attached to this acknowledgement, so the requirement remains open.",
+          "sent_at": "2026-10-06T12:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-dahlia-m3",
+          "sender": "Sana Ahmed",
+          "direction": "inbound",
+          "body": "The reviewer can accommodate an evening delivery on Friday because our procurement system stays open later that day. We still need the completed questionnaire itself. Please confirm a specific delivery time so the reviewer can plan the approval work.",
+          "sent_at": "2026-10-07T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-dahlia-m4",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "I will send the completed security questionnaire Friday at 7 pm IST. That is our confirmed delivery commitment for the document needed to release the purchase order. We are using your original template and completing the remaining security answers.",
+          "sent_at": "2026-10-07T13:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-dahlia-m5",
+          "sender": "Sana Ahmed",
+          "direction": "inbound",
+          "body": "Friday at seven in the evening, India time, works for our reviewer. We have recorded that delivery time and do not need the questionnaire earlier. The purchase approval will wait for the promised document within that agreed evening window.",
+          "sent_at": "2026-10-08T11:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-dahlia-m6",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "The security team is checking the answers before our agreed evening delivery. I am keeping the Friday at seven commitment, and this update does not include the completed questionnaire. Your reviewer can continue to expect the document at that time.",
+          "sent_at": "2026-10-09T15:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Dahlia Labs",
+        "subject": "Explicit evening deadline remains in its window",
+        "deal_value": 76000,
+        "output_contract": "glm-json-contract-v4-obligations"
+      }
+    },
+    {
+      "cache_key": "72ef618d635efaa60a000be9ccc9797fd818dcbffa3570f0ee97c6f37c5e35eb",
+      "thread_id": "long-edge-elmwood",
+      "provider": "glm",
+      "model": "glm-4.7-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"medium\",\"summary\":\"Elmwood Banking requires the data processing agreement to complete their security review and approve the purchase. The India data residency question is resolved.\",\"reason\":\"The prospect, Kavya Raman, explicitly stated that the purchase cannot be approved without the data processing agreement. While Alex Morgan has updated the team, the document is still outstanding. The residency question is resolved.\",\"blockers\":[\"Outstanding data processing agreement required for security review and purchase approval.\"],\"open_items\":[{\"description\":\"Provide the data processing agreement\",\"kind\":\"ask\",\"owner\":\"us\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-elmwood-m1\",\"long-edge-elmwood-m3\",\"long-edge-elmwood-m5\"],\"deadline\":null}],\"recommendations\":[{\"description\":\"Prioritize the DPA review to unblock the security checklist and procurement approval.\",\"evidence_message_ids\":[\"long-edge-elmwood-m5\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null}",
+      "raw_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"medium\",\"summary\":\"Elmwood Banking requires the data processing agreement to complete their security review and approve the purchase. The India data residency question is resolved.\",\"reason\":\"The prospect, Kavya Raman, explicitly stated that the purchase cannot be approved without the data processing agreement. While Alex Morgan has updated the team, the document is still outstanding. The residency question is resolved.\",\"blockers\":[\"Outstanding data processing agreement required for security review and purchase approval.\"],\"open_items\":[{\"description\":\"Provide the data processing agreement\",\"kind\":\"ask\",\"owner\":\"us\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-elmwood-m1\",\"long-edge-elmwood-m3\",\"long-edge-elmwood-m5\"],\"deadline\":null}],\"recommendations\":[{\"description\":\"Prioritize the DPA review to unblock the security checklist and procurement approval.\",\"evidence_message_ids\":[\"long-edge-elmwood-m5\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null}",
+      "created_at": "2026-10-06T18:48:15.292617+00:00",
+      "duration_ms": 109263,
+      "input_messages": [
+        {
+          "id": "long-edge-elmwood-m1",
+          "sender": "Kavya Raman",
+          "direction": "inbound",
+          "body": "Before approving the platform purchase, our security team needs confirmation of India data residency and a copy of the data processing agreement. Please provide both requirements in this thread so we can complete the commercial security review together.",
+          "sent_at": "2026-10-05T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-elmwood-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "India data residency is available through our regional hosting configuration. The architecture note is attached with the relevant storage boundaries and subprocessors. This answers the residency question, while the separate data processing agreement is still being checked by legal.",
+          "sent_at": "2026-10-05T12:00:00+05:30",
+          "attachments": [
+            "india-hosting.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-elmwood-m3",
+          "sender": "Kavya Raman",
+          "direction": "inbound",
+          "body": "Security has accepted the India residency note, so that question is resolved. We still need the data processing agreement before approving the purchase. Please keep the DPA request open; the hosting architecture document does not replace that separate commercial agreement.",
+          "sent_at": "2026-10-06T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-elmwood-m4",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Legal has the customer details needed for the data processing agreement and is reviewing the document. I have reminded them that security approval depends on it. This message is an update only and does not contain the outstanding DPA.",
+          "sent_at": "2026-10-07T14:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-elmwood-m5",
+          "sender": "Kavya Raman",
+          "direction": "inbound",
+          "body": "We have not received the data processing agreement yet, and the security checklist remains open. Procurement confirmed that the purchase cannot be approved without it. The residency note is already accepted and needs no further explanation from your team.",
+          "sent_at": "2026-10-09T16:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Elmwood Banking",
+        "subject": "Answer arrives after the evaluation cutoff",
+        "deal_value": 144000,
+        "output_contract": "glm-json-contract-v4-obligations"
+      }
+    },
+    {
+      "cache_key": "e319a16e98a7ad2c249e18f340eff857cb7d0e131ca7932e86c30336e1d0a502",
+      "thread_id": "long-edge-hawthorn",
+      "provider": "glm",
+      "model": "glm-4.7-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"medium\",\"summary\":\"The prospect is evaluating a pilot proposal. The seller has sent the requested offer and is following up for a decision.\",\"reason\":\"The operations team is interested in a pilot proposal, which has been sent. Diego Perez acknowledged receipt but has not provided a decision or new questions. The seller is following up for a decision.\",\"blockers\":[],\"open_items\":[{\"description\":\"Receive a decision or new questions from procurement regarding the sixty user pilot proposal.\",\"kind\":\"ask\",\"owner\":\"prospect\",\"important\":true,\"material\":false,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-hawthorn-m3\",\"long-edge-hawthorn-m5\",\"long-edge-hawthorn-m6\"],\"deadline\":null}],\"recommendations\":[{\"description\":\"Continue to follow up for a decision or new questions.\",\"evidence_message_ids\":[\"long-edge-hawthorn-m6\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[\"long-edge-hawthorn-m5\"],\"proposal_message_id\":\"long-edge-hawthorn-m4\",\"deferral\":null}",
+      "raw_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"medium\",\"summary\":\"The prospect is evaluating a pilot proposal. The seller has sent the requested offer and is following up for a decision.\",\"reason\":\"The operations team is interested in a pilot proposal, which has been sent. Diego Perez acknowledged receipt but has not provided a decision or new questions. The seller is following up for a decision.\",\"blockers\":[],\"open_items\":[{\"description\":\"Receive a decision or new questions from procurement regarding the sixty user pilot proposal.\",\"kind\":\"ask\",\"owner\":\"prospect\",\"important\":true,\"material\":false,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-hawthorn-m3\",\"long-edge-hawthorn-m5\",\"long-edge-hawthorn-m6\"],\"deadline\":null}],\"recommendations\":[{\"description\":\"Continue to follow up for a decision or new questions.\",\"evidence_message_ids\":[\"long-edge-hawthorn-m6\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[\"long-edge-hawthorn-m5\"],\"proposal_message_id\":\"long-edge-hawthorn-m4\",\"deferral\":null}",
+      "created_at": "2026-10-06T18:48:58.403697+00:00",
+      "duration_ms": 42577,
+      "input_messages": [
+        {
+          "id": "long-edge-hawthorn-m1",
+          "sender": "Diego Perez",
+          "direction": "inbound",
+          "body": "Our operations team is interested in evaluating identity management across several locations. Can you confirm whether location administrators can manage their own staff accounts? We want to understand that capability before asking procurement to consider a pilot proposal.",
+          "sent_at": "2026-10-01T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-hawthorn-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Location administrators can manage staff accounts within their assigned location using scoped roles. They do not gain access to unrelated locations. The permissions guide is attached and includes an example of the configuration for your operations team.",
+          "sent_at": "2026-10-01T12:00:00+05:30",
+          "attachments": [
+            "location-roles.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-hawthorn-m3",
+          "sender": "Diego Perez",
+          "direction": "inbound",
+          "body": "The permissions guide answers the location administration question. Please send a proposal for a sixty user pilot with pricing and evaluation duration. Procurement has not agreed a response date, but we would like the complete offer available for its review.",
+          "sent_at": "2026-10-01T15:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-hawthorn-m4",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "The requested sixty user pilot proposal is attached with pricing, evaluation duration, and the onboarding allowance. It answers the commercial details procurement requested. Please review the offer with your team and let us know your decision when the review finishes.",
+          "sent_at": "2026-10-02T11:00:00+05:30",
+          "attachments": [
+            "pilot-offer.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-hawthorn-m5",
+          "sender": "Diego Perez",
+          "direction": "inbound",
+          "body": "Thanks for sending the proposal. This is only an acknowledgement that your message reached me; I've no decision, review result, new question, or agreed later response date to share. Procurement has not yet provided a substantive response to the offer.",
+          "sent_at": "2026-10-03T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-hawthorn-m6",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Following up once on the sixty user pilot proposal sent last Friday. We have not received a decision or a new question from procurement. The complete offer remains available, including the pricing and evaluation duration requested by your operations team.",
+          "sent_at": "2026-10-07T14:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Hawthorn Foods",
+        "subject": "Stale proposal below the outreach saturation limit",
+        "deal_value": 46000,
+        "output_contract": "glm-json-contract-v4-obligations"
+      }
+    },
+    {
+      "cache_key": "0afaa93beba791c3a1625a2604f378cca4952a652a58b33493d97e7d347cf0fe",
+      "thread_id": "long-edge-kestrel",
+      "provider": "glm",
+      "model": "glm-4.7-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"deferred\",\"buyer_intent\":\"unknown\",\"summary\":\"The prospect has paused commercial discussions until October 9, 2026, with no outstanding questions or deliverables. The annual proposal has been provided and accepted for planning purposes.\",\"reason\":\"The prospect explicitly requested a pause on commercial conversations until October 9, 2026, and confirmed no outstanding questions or deliverables exist. The seller has acknowledged this deferral and recorded the agreed date.\",\"blockers\":[\"Prospect unavailable for commercial conversations until October 9, 2026.\"],\"open_items\":[],\"recommendations\":[{\"description\":\"Do not contact the prospect before October 9, 2026, as they have explicitly requested a pause on commercial discussions.\",\"evidence_message_ids\":[\"long-edge-kestrel-m3\",\"long-edge-kestrel-m4\",\"long-edge-kestrel-m5\",\"long-edge-kestrel-m6\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[\"long-edge-kestrel-m5\"],\"proposal_message_id\":\"long-edge-kestrel-m2\",\"deferral\":{\"expression\":\"until October 9\",\"message_id\":\"long-edge-kestrel-m3\"}}",
+      "raw_json": "{\"is_sales_related\":true,\"lifecycle\":\"deferred\",\"buyer_intent\":\"unknown\",\"summary\":\"The prospect has paused commercial discussions until October 9, 2026, with no outstanding questions or deliverables. The annual proposal has been provided and accepted for planning purposes.\",\"reason\":\"The prospect explicitly requested a pause on commercial conversations until October 9, 2026, and confirmed no outstanding questions or deliverables exist. The seller has acknowledged this deferral and recorded the agreed date.\",\"blockers\":[\"Prospect unavailable for commercial conversations until October 9, 2026.\"],\"open_items\":[],\"recommendations\":[{\"description\":\"Do not contact the prospect before October 9, 2026, as they have explicitly requested a pause on commercial discussions.\",\"evidence_message_ids\":[\"long-edge-kestrel-m3\",\"long-edge-kestrel-m4\",\"long-edge-kestrel-m5\",\"long-edge-kestrel-m6\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[\"long-edge-kestrel-m5\"],\"proposal_message_id\":\"long-edge-kestrel-m2\",\"deferral\":{\"expression\":\"until October 9\",\"message_id\":\"long-edge-kestrel-m3\"}}",
+      "created_at": "2026-10-06T18:50:07.698378+00:00",
+      "duration_ms": 69144,
+      "input_messages": [
+        {
+          "id": "long-edge-kestrel-m1",
+          "sender": "Emma Doyle",
+          "direction": "inbound",
+          "body": "We want to consider your identity platform once our planning meeting is complete. Please send the annual proposal with the seat count discussed earlier. We need that document for planning, but are not ready to make a purchase decision yet.",
+          "sent_at": "2026-10-01T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-kestrel-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "The annual proposal is attached with the requested seat count, pricing, and implementation allowance. It includes everything discussed during the introduction. Please use this version for your planning meeting; we can revisit the opportunity once your internal priorities are clearer.",
+          "sent_at": "2026-10-01T13:00:00+05:30",
+          "attachments": [
+            "annual-proposal.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-kestrel-m3",
+          "sender": "Emma Doyle",
+          "direction": "inbound",
+          "body": "The proposal contains all the information requested for planning. Please wait until October 9 before restarting the proposal discussion. We'll be unavailable for commercial conversations before that date, and there are no outstanding questions or deliverables for your team now.",
+          "sent_at": "2026-10-02T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-kestrel-m4",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "I've recorded October 9 as the agreed date for restarting the proposal discussion. We will respect the waiting period until then. The annual offer remains available, and I understand that you have no pending questions or requested documents from us.",
+          "sent_at": "2026-10-02T14:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-kestrel-m5",
+          "sender": "Emma Doyle",
+          "direction": "inbound",
+          "body": "Our planning timetable remains unchanged, including the October 9 date for restarting commercial discussions. The annual proposal has all the information we need. This is a status confirmation, with no decision or new request to share before that agreed date.",
+          "sent_at": "2026-10-07T11:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-kestrel-m6",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Thanks for confirming the planning timetable. We have kept the proposal available while respecting the agreed waiting period. I have recorded that no decision or additional material is expected before October 9, when the existing pause on commercial discussions ends.",
+          "sent_at": "2026-10-08T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Kestrel Automotive",
+        "subject": "Agreed recontact date has arrived",
+        "deal_value": 68000,
+        "output_contract": "glm-json-contract-v4-obligations"
+      }
+    }
+  ]
+}

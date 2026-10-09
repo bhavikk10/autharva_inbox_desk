@@ -1,0 +1,150 @@
+{
+  "origin": "actual-model-runs",
+  "prompt_version": "2",
+  "schema_version": "1",
+  "runs": [
+    {
+      "cache_key": "536d55d26395224205aad892a07726c74bab13054898e3593e0a0f968c8e01fa",
+      "thread_id": "long-edge-elmwood",
+      "provider": "glm",
+      "model": "glm-4.7-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"medium\",\"summary\":\"The prospect requires the data processing agreement to proceed with the purchase. While the India data residency question is resolved, the DPA remains outstanding and is a material blocker for the deal.\",\"reason\":\"Kavya Raman explicitly stated that the purchase cannot be approved without the data processing agreement. Alex Morgan has acknowledged the request and updated the status, but has not yet provided the document. The security team has accepted the India residency note.\",\"blockers\":[\"Data processing agreement not provided\"],\"open_items\":[{\"description\":\"Provide the data processing agreement\",\"kind\":\"ask\",\"owner\":\"us\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-elmwood-m1\",\"long-edge-elmwood-m3\",\"long-edge-elmwood-m5\"],\"deadline\":null,\"action_evidence\":{\"message_id\":\"long-edge-elmwood-m1\",\"quote\":\"Please provide both requirements in this thread so we can complete the commercial security review together.\"},\"ownership_evidence\":{\"message_id\":\"long-edge-elmwood-m1\",\"quote\":\"Before approving the platform purchase, our security team needs confirmation of India data residency and a copy of the data processing agreement.\"},\"urgency_evidence\":null}],\"recommendations\":[{\"description\":\"Send the data processing agreement to Kavya Raman immediately.\",\"evidence_message_ids\":[\"long-edge-elmwood-m5\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null,\"resolved_items\":[],\"obligations\":[{\"description\":\"Provide the data processing agreement\",\"kind\":\"ask\",\"owner\":\"us\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-elmwood-m1\",\"long-edge-elmwood-m3\",\"long-edge-elmwood-m5\"],\"deadline\":null,\"action_evidence\":{\"message_id\":\"long-edge-elmwood-m1\",\"quote\":\"Please provide both requirements in this thread so we can complete the commercial security review together.\"},\"ownership_evidence\":{\"message_id\":\"long-edge-elmwood-m1\",\"quote\":\"Before approving the platform purchase, our security team needs confirmation of India data residency and a copy of the data processing agreement.\"},\"urgency_evidence\":null,\"status\":\"open\",\"resolution_evidence\":null}]}",
+      "raw_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"medium\",\"summary\":\"The prospect requires the data processing agreement to proceed with the purchase. While the India data residency question is resolved, the DPA remains outstanding and is a material blocker for the deal.\",\"reason\":\"Kavya Raman explicitly stated that the purchase cannot be approved without the data processing agreement. Alex Morgan has acknowledged the request and updated the status, but has not yet provided the document. The security team has accepted the India residency note.\",\"blockers\":[\"Data processing agreement not provided\"],\"obligations\":[{\"description\":\"Provide the data processing agreement\",\"kind\":\"ask\",\"owner\":\"us\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-elmwood-m1\",\"long-edge-elmwood-m3\",\"long-edge-elmwood-m5\"],\"deadline\":null,\"action_evidence\":{\"message_id\":\"long-edge-elmwood-m1\",\"quote\":\"Please provide both requirements in this thread so we can complete the commercial security review together.\"},\"ownership_evidence\":{\"message_id\":\"long-edge-elmwood-m1\",\"quote\":\"Before approving the platform purchase, our security team needs confirmation of India data residency and a copy of the data processing agreement.\"},\"urgency_evidence\":null,\"status\":\"open\",\"resolution_evidence\":null}],\"recommendations\":[{\"description\":\"Send the data processing agreement to Kavya Raman immediately.\",\"evidence_message_ids\":[\"long-edge-elmwood-m5\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null}",
+      "created_at": "2026-10-07T13:00:31.132469+00:00",
+      "duration_ms": 28881,
+      "input_messages": [
+        {
+          "id": "long-edge-elmwood-m1",
+          "sender": "Kavya Raman",
+          "direction": "inbound",
+          "body": "Before approving the platform purchase, our security team needs confirmation of India data residency and a copy of the data processing agreement. Please provide both requirements in this thread so we can complete the commercial security review together.",
+          "sent_at": "2026-10-05T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-elmwood-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "India data residency is available through our regional hosting configuration. The architecture note is attached with the relevant storage boundaries and subprocessors. This answers the residency question, while the separate data processing agreement is still being checked by legal.",
+          "sent_at": "2026-10-05T12:00:00+05:30",
+          "attachments": [
+            "india-hosting.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-elmwood-m3",
+          "sender": "Kavya Raman",
+          "direction": "inbound",
+          "body": "Security has accepted the India residency note, so that question is resolved. We still need the data processing agreement before approving the purchase. Please keep the DPA request open; the hosting architecture document does not replace that separate commercial agreement.",
+          "sent_at": "2026-10-06T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-elmwood-m4",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Legal has the customer details needed for the data processing agreement and is reviewing the document. I have reminded them that security approval depends on it. This message is an update only and does not contain the outstanding DPA.",
+          "sent_at": "2026-10-07T14:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-elmwood-m5",
+          "sender": "Kavya Raman",
+          "direction": "inbound",
+          "body": "We have not received the data processing agreement yet, and the security checklist remains open. Procurement confirmed that the purchase cannot be approved without it. The residency note is already accepted and needs no further explanation from your team.",
+          "sent_at": "2026-10-09T16:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Elmwood Banking",
+        "subject": "Answer arrives after the evaluation cutoff",
+        "deal_value": 144000,
+        "output_contract": "glm-json-contract-v7-ledger-template",
+        "extraction_contract": "grounded-obligations-v2-ledger"
+      }
+    },
+    {
+      "cache_key": "b83dbcee96ae7d7e49b70869fb5be019edd07d6e9bab287de5796a2aa1948a2e",
+      "thread_id": "long-edge-elmwood",
+      "provider": "glm",
+      "model": "glm-4.7-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"high\",\"summary\":\"Elmwood Banking requires the data processing agreement for purchase approval. The India data residency question has been resolved. The DPA was delivered on October 9th.\",\"reason\":\"The prospect, Kavya Raman, explicitly stated that the purchase cannot be approved without the data processing agreement. The security team has accepted the India residency note, but the DPA remains the critical blocker. The DPA was delivered by Alex Morgan on October 9th, fulfilling the outstanding commitment.\",\"blockers\":[\"Data processing agreement required for purchase approval\"],\"open_items\":[],\"recommendations\":[{\"description\":\"Confirm receipt and acceptance of the DPA with the security team to unblock procurement.\",\"evidence_message_ids\":[\"long-edge-elmwood-m5\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null,\"resolved_items\":[{\"description\":\"Provide data processing agreement\",\"kind\":\"commitment\",\"owner\":\"us\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-elmwood-m1\",\"long-edge-elmwood-m2\",\"long-edge-elmwood-m3\",\"long-edge-elmwood-m4\",\"long-edge-elmwood-m5\",\"long-edge-elmwood-m6\"],\"deadline\":null,\"action_evidence\":{\"message_id\":\"long-edge-elmwood-m1\",\"quote\":\"Please provide both requirements in this thread so we can complete the commercial security review together.\"},\"ownership_evidence\":{\"message_id\":\"long-edge-elmwood-m2\",\"quote\":\"The separate data processing agreement is still being checked by legal.\"},\"urgency_evidence\":null,\"resolution_status\":\"fulfilled\",\"resolution_evidence\":{\"message_id\":\"long-edge-elmwood-m6\",\"quote\":\"The completed data processing agreement is attached now, including your customer details and the agreed hosting region. This delivers the separate DPA that security requested for purchase approval.\"}}],\"obligations\":[{\"description\":\"Provide data processing agreement\",\"kind\":\"commitment\",\"owner\":\"us\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-elmwood-m1\",\"long-edge-elmwood-m2\",\"long-edge-elmwood-m3\",\"long-edge-elmwood-m4\",\"long-edge-elmwood-m5\",\"long-edge-elmwood-m6\"],\"deadline\":null,\"action_evidence\":{\"message_id\":\"long-edge-elmwood-m1\",\"quote\":\"Please provide both requirements in this thread so we can complete the commercial security review together.\"},\"ownership_evidence\":{\"message_id\":\"long-edge-elmwood-m2\",\"quote\":\"The separate data processing agreement is still being checked by legal.\"},\"urgency_evidence\":null,\"status\":\"fulfilled\",\"resolution_evidence\":{\"message_id\":\"long-edge-elmwood-m6\",\"quote\":\"The completed data processing agreement is attached now, including your customer details and the agreed hosting region. This delivers the separate DPA that security requested for purchase approval.\"}}]}",
+      "raw_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"high\",\"summary\":\"Elmwood Banking requires the data processing agreement for purchase approval. The India data residency question has been resolved. The DPA was delivered on October 9th.\",\"reason\":\"The prospect, Kavya Raman, explicitly stated that the purchase cannot be approved without the data processing agreement. The security team has accepted the India residency note, but the DPA remains the critical blocker. The DPA was delivered by Alex Morgan on October 9th, fulfilling the outstanding commitment.\",\"blockers\":[\"Data processing agreement required for purchase approval\"],\"obligations\":[{\"description\":\"Provide data processing agreement\",\"kind\":\"commitment\",\"owner\":\"us\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-elmwood-m1\",\"long-edge-elmwood-m2\",\"long-edge-elmwood-m3\",\"long-edge-elmwood-m4\",\"long-edge-elmwood-m5\",\"long-edge-elmwood-m6\"],\"deadline\":null,\"action_evidence\":{\"message_id\":\"long-edge-elmwood-m1\",\"quote\":\"Please provide both requirements in this thread so we can complete the commercial security review together.\"},\"ownership_evidence\":{\"message_id\":\"long-edge-elmwood-m2\",\"quote\":\"The separate data processing agreement is still being checked by legal.\"},\"urgency_evidence\":null,\"status\":\"fulfilled\",\"resolution_evidence\":{\"message_id\":\"long-edge-elmwood-m6\",\"quote\":\"The completed data processing agreement is attached now, including your customer details and the agreed hosting region. This delivers the separate DPA that security requested for purchase approval.\"}}],\"recommendations\":[{\"description\":\"Confirm receipt and acceptance of the DPA with the security team to unblock procurement.\",\"evidence_message_ids\":[\"long-edge-elmwood-m5\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null}",
+      "created_at": "2026-10-07T13:05:13.663820+00:00",
+      "duration_ms": 6752,
+      "input_messages": [
+        {
+          "id": "long-edge-elmwood-m1",
+          "sender": "Kavya Raman",
+          "direction": "inbound",
+          "body": "Before approving the platform purchase, our security team needs confirmation of India data residency and a copy of the data processing agreement. Please provide both requirements in this thread so we can complete the commercial security review together.",
+          "sent_at": "2026-10-05T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-elmwood-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "India data residency is available through our regional hosting configuration. The architecture note is attached with the relevant storage boundaries and subprocessors. This answers the residency question, while the separate data processing agreement is still being checked by legal.",
+          "sent_at": "2026-10-05T12:00:00+05:30",
+          "attachments": [
+            "india-hosting.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-elmwood-m3",
+          "sender": "Kavya Raman",
+          "direction": "inbound",
+          "body": "Security has accepted the India residency note, so that question is resolved. We still need the data processing agreement before approving the purchase. Please keep the DPA request open; the hosting architecture document does not replace that separate commercial agreement.",
+          "sent_at": "2026-10-06T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-elmwood-m4",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Legal has the customer details needed for the data processing agreement and is reviewing the document. I have reminded them that security approval depends on it. This message is an update only and does not contain the outstanding DPA.",
+          "sent_at": "2026-10-07T14:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-elmwood-m5",
+          "sender": "Kavya Raman",
+          "direction": "inbound",
+          "body": "We have not received the data processing agreement yet, and the security checklist remains open. Procurement confirmed that the purchase cannot be approved without it. The residency note is already accepted and needs no further explanation from your team.",
+          "sent_at": "2026-10-09T16:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-elmwood-m6",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "The completed data processing agreement is attached now, including your customer details and the agreed hosting region. This delivers the separate DPA that security requested for purchase approval. The earlier architecture note still covers the already resolved residency question.",
+          "sent_at": "2026-10-09T19:00:00+05:30",
+          "attachments": [
+            "completed-dpa.pdf"
+          ],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Elmwood Banking",
+        "subject": "Answer arrives after the evaluation cutoff",
+        "deal_value": 144000,
+        "output_contract": "glm-json-contract-v7-ledger-template",
+        "extraction_contract": "grounded-obligations-v2-ledger"
+      }
+    }
+  ]
+}

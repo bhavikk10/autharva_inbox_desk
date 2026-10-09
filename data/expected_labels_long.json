@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "authorship": "Policy expectations authored and frozen before inference. Long-form development scenarios; not an independent held-out benchmark.",
+  "human_reviewed": false,
+  "as_of": "2026-10-09T18:00:00+05:30",
+  "cases": [
+    {"id":"long-aster","split":"development","tier":"T1","reason":"Important SCIM/deactivation buyer ask remains unanswered for more than 48 hours; residency answer resolves only residency."},
+    {"id":"long-beacon","split":"development","tier":"T1","reason":"Material Friday legal decision commitment missed after 17:00 despite progress acknowledgement."},
+    {"id":"long-cascade","split":"development","tier":"T1","reason":"Seller material questionnaire commitment explicitly rescheduled to Friday and missed after 17:00."},
+    {"id":"long-delta","split":"development","tier":"T3","reason":"Pricing and permissions fulfilled; October 13 walkthrough scheduled without outstanding action."},
+    {"id":"long-ember","split":"development","tier":"T3","reason":"Proposal plus three unanswered follow-ups; polite acknowledgement is not a substantive decision and generic chasing is suppressed."},
+    {"id":"long-fable","split":"development","tier":"T3","reason":"Complete proposal explicitly deferred to month-end; no earlier obligation."},
+    {"id":"long-grove","split":"development","tier":"T1","reason":"Won subscription still has an overdue important seller DPA commitment; onboarding does not resolve it."},
+    {"id":"long-helios","split":"development","tier":"T1","reason":"Explicit urgent current insurance document request and old unanswered commercial obligation survive prior outreach."}
+  ],
+  "clock_checks": []
+}

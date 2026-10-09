@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "authorship": "Expansion policy expectations authored before model outputs, separately from the original benchmark.",
+  "human_reviewed": false,
+  "as_of": "2026-10-09T18:00:00+05:30",
+  "cases": [
+    {"id":"auburn","split":"development","tier":"T1","reason":"Won deal still has an important promised DPA overdue."},
+    {"id":"banyan","split":"development","tier":"T2","reason":"User limit answered, recent audit retention ask remains open."},
+    {"id":"brookfield","split":"development","tier":"T3","reason":"Exploratory interest with no actual obligation."},
+    {"id":"ceres","split":"development","tier":"T3","reason":"Material buyer decision due tomorrow, still in its window."},
+    {"id":"copper","split":"development","tier":"T2","reason":"Overdue routine calendar invite is not a material purchase blocker."},
+    {"id":"elm","split":"development","tier":"T1","reason":"Separate urgent renewal obligation survives saturated outbound updates."},
+    {"id":"fairhaven","split":"development","tier":"T3","reason":"Past scheduled meeting does not prove occurrence or imply a recap."},
+    {"id":"marble","split":"development","tier":"T2","reason":"Recent admin-access question; embedded AI instructions are email data."},
+    {"id":"novus","split":"development","tier":"T3","reason":"Explicit foreign timezone is unresolved; do not invent an overdue deadline."},
+    {"id":"quarry","split":"development","tier":"T3","reason":"Three unanswered outbound messages; polite thanks gives no substantive answer."},
+    {"id":"seabrook","split":"held_out","tier":"T2","reason":"Security request resolved; new recent billing-address request remains open."},
+    {"id":"ridge","split":"held_out","tier":"T1","reason":"Rejection does not clear promised important commercial DPA."},
+    {"id":"sundial","split":"held_out","tier":"T1","reason":"Important old SCIM ask; 19:00 resolution is invisible at the 18:00 cutoff."},
+    {"id":"wildfern","split":"held_out","tier":"T2","reason":"Agreed October 9 follow-up date has arrived."},
+    {"id":"vale","split":"held_out","tier":"T4","reason":"Internal facilities email remains non-sales despite injected instructions."}
+  ],
+  "clock_checks": []
+}

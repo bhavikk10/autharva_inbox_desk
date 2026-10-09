@@ -1,0 +1,2510 @@
+{
+  "origin": "actual-model-runs",
+  "job_id": "956819464c724ee2aa0c7453d1f91eef",
+  "as_of": "2026-10-09T18:00:00+05:30",
+  "force": false,
+  "status": "completed",
+  "identity": {
+    "provider": "glm",
+    "model": "glm-4.7-flash",
+    "extraction_contract": "grounded-obligations-v2-ledger",
+    "output_contract": "glm-json-contract-v11-bounded-reasoning-recovery",
+    "gmail_contract": "grounded-general-mail-v2-recipient-obligations",
+    "generation_config": {
+      "thinking": "enabled",
+      "max_output_tokens": 8192,
+      "reasoning_exhaustion_recovery": true
+    },
+    "fallback": {
+      "provider": "ollama",
+      "model": "qwen3.5:4b",
+      "primary_budget_seconds": 90.0
+    }
+  },
+  "counts": {
+    "analyzed": 77,
+    "error": 1
+  },
+  "failures_by_reason": {
+    "Evidence quote must match its source message wording (whitespace differences are allowed). Fallback qwen3.5:4b: Date expression 'when the review finishes' must be verbatim in message long-edge-hawthorn-m3; calculated dates or wrong source IDs are rejected.": 1
+  },
+  "reasoning_recoveries_attempted": 19,
+  "reasoning_recoveries_accepted": 11,
+  "accepted_thinking_modes": {
+    "enabled": 26,
+    "disabled": 11
+  },
+  "actual_providers": {
+    "ollama": 40,
+    "glm": 37
+  },
+  "fallback_accepted": 40,
+  "provider_metrics": {
+    "glm": {
+      "expansion.development": {
+        "accepted": 6,
+        "labelled": 6,
+        "agreement": 5,
+        "critical_misses": 0,
+        "false_T1": 1
+      },
+      "expansion.held_out": {
+        "accepted": 3,
+        "labelled": 3,
+        "agreement": 3,
+        "critical_misses": 0,
+        "false_T1": 0
+      },
+      "long.development": {
+        "accepted": 3,
+        "labelled": 3,
+        "agreement": 2,
+        "critical_misses": 0,
+        "false_T1": 1
+      },
+      "long_edge.development": {
+        "accepted": 7,
+        "labelled": 7,
+        "agreement": 7,
+        "critical_misses": 0,
+        "false_T1": 0
+      },
+      "original.development": {
+        "accepted": 9,
+        "labelled": 9,
+        "agreement": 9,
+        "critical_misses": 0,
+        "false_T1": 0
+      },
+      "original.held_out": {
+        "accepted": 2,
+        "labelled": 2,
+        "agreement": 2,
+        "critical_misses": 0,
+        "false_T1": 0
+      },
+      "unlabelled_samples": {
+        "accepted": 7,
+        "labelled": 0,
+        "agreement": 0,
+        "critical_misses": 0,
+        "false_T1": 0
+      }
+    },
+    "ollama": {
+      "expansion.development": {
+        "accepted": 4,
+        "labelled": 4,
+        "agreement": 3,
+        "critical_misses": 0,
+        "false_T1": 0
+      },
+      "expansion.held_out": {
+        "accepted": 2,
+        "labelled": 2,
+        "agreement": 2,
+        "critical_misses": 0,
+        "false_T1": 0
+      },
+      "long.development": {
+        "accepted": 5,
+        "labelled": 5,
+        "agreement": 5,
+        "critical_misses": 0,
+        "false_T1": 0
+      },
+      "long_edge.development": {
+        "accepted": 12,
+        "labelled": 12,
+        "agreement": 11,
+        "critical_misses": 0,
+        "false_T1": 0
+      },
+      "original.development": {
+        "accepted": 6,
+        "labelled": 6,
+        "agreement": 6,
+        "critical_misses": 0,
+        "false_T1": 0
+      },
+      "original.held_out": {
+        "accepted": 3,
+        "labelled": 3,
+        "agreement": 2,
+        "critical_misses": 0,
+        "false_T1": 0
+      },
+      "unlabelled_samples": {
+        "accepted": 8,
+        "labelled": 0,
+        "agreement": 0,
+        "critical_misses": 0,
+        "false_T1": 0
+      }
+    }
+  },
+  "metrics": {
+    "expansion.development": {
+      "total": 10,
+      "accepted": 10,
+      "labelled": 10,
+      "agreement": 8,
+      "agreement_denominator": 10,
+      "critical_misses": 0,
+      "unassessed_true_T1": 0,
+      "false_T1": 1
+    },
+    "expansion.held_out": {
+      "total": 5,
+      "accepted": 5,
+      "labelled": 5,
+      "agreement": 5,
+      "agreement_denominator": 5,
+      "critical_misses": 0,
+      "unassessed_true_T1": 0,
+      "false_T1": 0
+    },
+    "long.development": {
+      "total": 8,
+      "accepted": 8,
+      "labelled": 8,
+      "agreement": 7,
+      "agreement_denominator": 8,
+      "critical_misses": 0,
+      "unassessed_true_T1": 0,
+      "false_T1": 1
+    },
+    "long_edge.development": {
+      "total": 20,
+      "accepted": 19,
+      "labelled": 20,
+      "agreement": 18,
+      "agreement_denominator": 19,
+      "critical_misses": 0,
+      "unassessed_true_T1": 0,
+      "false_T1": 0
+    },
+    "original.development": {
+      "total": 15,
+      "accepted": 15,
+      "labelled": 15,
+      "agreement": 15,
+      "agreement_denominator": 15,
+      "critical_misses": 0,
+      "unassessed_true_T1": 0,
+      "false_T1": 0
+    },
+    "original.held_out": {
+      "total": 5,
+      "accepted": 5,
+      "labelled": 5,
+      "agreement": 4,
+      "agreement_denominator": 5,
+      "critical_misses": 0,
+      "unassessed_true_T1": 0,
+      "false_T1": 0
+    },
+    "unlabelled_samples": {
+      "total": 15,
+      "accepted": 15,
+      "labelled": 0,
+      "agreement": 0,
+      "agreement_denominator": 0,
+      "critical_misses": 0,
+      "unassessed_true_T1": 0,
+      "false_T1": 0
+    }
+  },
+  "label_note": "Five original held-out labels were user-reviewed. The other 58 labels, including the five expansion held-out labels, are implementer-authored frozen policy checks. The 15 new samples have no frozen labels. force=false reuses valid actual saved assessments.",
+  "results": [
+    {
+      "thread_id": "long-edge-dahlia",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": "T2",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 500. Z.ai is temporarily unavailable after bounded retries. Try again later.",
+        "primary_cache_key": "989775e9f859c9c2324d63d0ca4c0200349acbb81ce17a53dfe99b97d0156c9e"
+      },
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 500,
+          "provider_code": "1234",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 500,
+          "provider_code": "1234",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "cedar",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM response timed out after 600 seconds. No assessment was accepted. The provider may still be generating; wait before retrying.",
+        "primary_cache_key": "72ae61247a4b23db7993c6f36ce385a65e7df7354f0123cf3fe0f03a5ef009e3"
+      },
+      "split": "original.held_out",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 2333,
+          "final_chars": 0,
+          "reasoning_chars": 30089,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "outcome": "read_timeout",
+          "cooldown_seconds": 90
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-edge-thistle",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T4",
+      "expected": "T4",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM connection failed or timed out. Check API connectivity and retry.",
+        "primary_cache_key": "d9403ee8ca0e125c5f8927857d720730cad49967cbac9363bc69efc669539152"
+      },
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 2823,
+          "final_chars": 0,
+          "reasoning_chars": 32051,
+          "recovery": "reasoning_exhaustion"
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "orbit",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM response timed out after 600 seconds. No assessment was accepted. The provider may still be generating; wait before retrying.",
+        "primary_cache_key": "18f65b38d58c115666cb86d79a7a319da229a437195387cc6602f4691834db09"
+      },
+      "split": "original.held_out",
+      "provider_responses": [
+        {
+          "outcome": "read_timeout",
+          "cooldown_seconds": 90
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-edge-reed",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": "T3",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM response timed out after 600 seconds. No assessment was accepted. The provider may still be generating; wait before retrying.",
+        "primary_cache_key": "dae9d26d927ccfef51f9736077fa091ebe7b779cbee5ba574003cca9ed4c4067"
+      },
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 2834,
+          "final_chars": 0,
+          "reasoning_chars": 33929,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "outcome": "read_timeout",
+          "cooldown_seconds": 90
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "signal",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T4",
+      "expected": "T4",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM response timed out after 600 seconds. No assessment was accepted. The provider may still be generating; wait before retrying.",
+        "primary_cache_key": "7c83a86e3efc0e306c0fd14428abe95a2cc9d1b554f87c37a2a8bd5708d4697a"
+      },
+      "split": "original.development",
+      "provider_responses": [
+        {
+          "outcome": "read_timeout",
+          "cooldown_seconds": 90
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "sample-partial",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": null,
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM connection failed or timed out. Check API connectivity and retry.",
+        "primary_cache_key": "22825eec179a3ddd73ff1cc3ee50f60900b8e4c1536f73dd17d53c702a0ff5a1"
+      },
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 3198,
+          "final_chars": 0,
+          "reasoning_chars": 32260,
+          "recovery": "reasoning_exhaustion"
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "brookfield",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T4",
+      "expected": "T3",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM response timed out after 600 seconds. No assessment was accepted. The provider may still be generating; wait before retrying.",
+        "primary_cache_key": "3b355bb8450b61908721ece18184c023218e362e5fbb799a35ffc1fddaa8b5fb"
+      },
+      "split": "expansion.development",
+      "provider_responses": [
+        {
+          "outcome": "read_timeout",
+          "cooldown_seconds": 90
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "auburn",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM response timed out after 600 seconds. No assessment was accepted. The provider may still be generating; wait before retrying.",
+        "primary_cache_key": "f9b05ae3e367c07873d836913ec7712f8c20761798694bd7a2fb729761956d06"
+      },
+      "split": "expansion.development",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 2419,
+          "final_chars": 0,
+          "reasoning_chars": 30705,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "outcome": "read_timeout",
+          "cooldown_seconds": 90
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-edge-cypress",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM connection failed or timed out. Check API connectivity and retry.",
+        "primary_cache_key": "0dee737282e9b726a5e8fd3e3b11dbf5d7a429f7ccd9d32c1a5794995451c684"
+      },
+      "split": "long_edge.development",
+      "provider_responses": [],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-grove",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM response timed out after 600 seconds. No assessment was accepted. The provider may still be generating; wait before retrying.",
+        "primary_cache_key": "26ccdafb3ea350178dc94325b79ebb63f610bd723c72e2c3bec7f9d088a72df3"
+      },
+      "split": "long.development",
+      "provider_responses": [
+        {
+          "outcome": "read_timeout",
+          "cooldown_seconds": 90
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-edge-kestrel",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": "T2",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM response timed out after 600 seconds. No assessment was accepted. The provider may still be generating; wait before retrying.",
+        "primary_cache_key": "dc6c7956bdf83529dafbb34e1dffbadc419ab14e5b21eae1dad28dde67e52a46"
+      },
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "outcome": "read_timeout",
+          "cooldown_seconds": 90
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "evergreen",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM response timed out after 600 seconds. No assessment was accepted. The provider may still be generating; wait before retrying.",
+        "primary_cache_key": "3905ef9caa5c9a7df06affbb83735f38578f96ef421b2ac4d26658d1c9d70a6a"
+      },
+      "split": "original.development",
+      "provider_responses": [
+        {
+          "outcome": "read_timeout",
+          "cooldown_seconds": 90
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-edge-finch",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": "T2",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM connection failed or timed out. Check API connectivity and retry.",
+        "primary_cache_key": "04df35a6c26ec6a6e6b00745770f601d4a53a563c80a8a4decb486075a1276c0"
+      },
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "elm",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM response timed out after 600 seconds. No assessment was accepted. The provider may still be generating; wait before retrying.",
+        "primary_cache_key": "cf4dbbd73ef3afcacd4e8989a849ed8a64c74aaebc4294162a7ab3d7d229ea92"
+      },
+      "split": "expansion.development",
+      "provider_responses": [
+        {
+          "outcome": "read_timeout",
+          "cooldown_seconds": 90
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "atlas",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 429. GLM is temporarily overloaded. Retry later.",
+        "primary_cache_key": "15fa230a967cab82c8b897a2e6dde8dd0abbbafa539817d2cbc5beae04238b5b"
+      },
+      "split": "original.development",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-edge-saffron",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": "T2",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 429. GLM is temporarily overloaded. Retry later.",
+        "primary_cache_key": "2a879b34286e33ff8696da9e929d95b2b95310dc2594b36b202e6e8038b63b52"
+      },
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "horizon",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T4",
+      "expected": "T3",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 429. GLM is temporarily overloaded. Retry later.",
+        "primary_cache_key": "1db35612bf63ee92d76eb3f692bdf4532434d92eb60950971a95a9e59af22afd"
+      },
+      "split": "original.held_out",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "ridge",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 429. GLM is temporarily overloaded. Retry later.",
+        "primary_cache_key": "38e987bf522c279429651b1ea0e62c66cd60599b3ff62b6c5fe9d1f9796cf919"
+      },
+      "split": "expansion.held_out",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-aster",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 429. GLM is temporarily overloaded. Retry later.",
+        "primary_cache_key": "bc28a220ca81dfe0dabd3a9fb1a7da3b3819df3e797bd264717d59f7f75ad8aa"
+      },
+      "split": "long.development",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "marble",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": "T2",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 429. GLM is temporarily overloaded. Retry later.",
+        "primary_cache_key": "3e1fc843f9a44e7f58b2450c581c6251913afd90dfe959ea6176e1f4ba46aed9"
+      },
+      "split": "expansion.development",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-cascade",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 429. GLM is temporarily overloaded. Retry later.",
+        "primary_cache_key": "49cd8147f17e9c745b23b6904b32f61f89f48270270d1b53dbc159fcc572fc23"
+      },
+      "split": "long.development",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "wildfern",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": "T2",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM response timed out after 600 seconds. No assessment was accepted. The provider may still be generating; wait before retrying.",
+        "primary_cache_key": "0738ba9b8bfc3e576fdfd980d8cb774e1dd70084ddd7896d0d66b86a7515c1f8"
+      },
+      "split": "expansion.held_out",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 2339,
+          "final_chars": 0,
+          "reasoning_chars": 32861,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "outcome": "read_timeout",
+          "cooldown_seconds": 90
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "northstar",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM response timed out after 600 seconds. No assessment was accepted. The provider may still be generating; wait before retrying.",
+        "primary_cache_key": "a440ff42752b04a7d1230aa0b97b676c1f69f434f651131863f34c7a4ff393ee"
+      },
+      "split": "original.development",
+      "provider_responses": [
+        {
+          "outcome": "read_timeout",
+          "cooldown_seconds": 90
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-edge-nettle",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T4",
+      "expected": "T4",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM response timed out after 600 seconds. No assessment was accepted. The provider may still be generating; wait before retrying.",
+        "primary_cache_key": "c3666e9ebd03f659fbb27d7e7ef05e0e40320fe28292482fed57bfe8a5161f58"
+      },
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "outcome": "read_timeout",
+          "cooldown_seconds": 90
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "sample-pilot-3",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": null,
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 500. Z.ai is temporarily unavailable after bounded retries. Try again later.",
+        "primary_cache_key": "ded28474b8befeb29dcded8f80a091dc8aecb8e096c8b98f2c3a240c48512198"
+      },
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 500,
+          "provider_code": "1234",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "sample-pilot-4",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": null,
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 500. Z.ai is temporarily unavailable after bounded retries. Try again later.",
+        "primary_cache_key": "e26f2ef26779f9fcafb8fbf81a8994cfd93e286c3c5eeed24d669f82df151da1"
+      },
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "http_status": 500,
+          "provider_code": "1234",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 500,
+          "provider_code": "1234",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 500,
+          "provider_code": "1234",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "sample-timezone",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": null,
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 429. GLM is temporarily overloaded. Retry later.",
+        "primary_cache_key": "3377ee008cf0ded667a455ca875e0a8ba00bba282a45b0912f076f66ab1688f9"
+      },
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 3948,
+          "prompt_tokens": 3109,
+          "final_chars": 2086,
+          "reasoning_chars": 13157
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "sample-pilot-2",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": null,
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 500. Z.ai is temporarily unavailable after bounded retries. Try again later.",
+        "primary_cache_key": "1e0df7e4166248a534135f024ad17b89c0728cfcdcd35119ea31408eb01e3607"
+      },
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 3091,
+          "final_chars": 0,
+          "reasoning_chars": 33584,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "http_status": 500,
+          "provider_code": "1234",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 500,
+          "provider_code": "1234",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 500,
+          "provider_code": "1234",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "sample-owner",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T4",
+      "expected": null,
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 500. Z.ai is temporarily unavailable after bounded retries. Try again later.",
+        "primary_cache_key": "93bac4ec0ba645e80ca885088134e10fbd7cac8cfcfe5d3a560a27d2da6da10d"
+      },
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 500,
+          "provider_code": "1234",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "sample-dpa",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": null,
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 429. GLM is temporarily overloaded. Retry later.",
+        "primary_cache_key": "693850262fc54e3bd7fba3fbe7b1a60f7e32047b838dcb689ef8e7f74ad70445"
+      },
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "http_status": 500,
+          "provider_code": "1234",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "sample-reschedule",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T4",
+      "expected": null,
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "Model output failed the structured schema. No assessment was accepted.",
+        "primary_cache_key": "d5ce2a368a16e783b1a840319fab6594340ba5e2db138f383c5a69896d790768"
+      },
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 3757,
+          "prompt_tokens": 3086,
+          "final_chars": 660,
+          "reasoning_chars": 15291
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 6502,
+          "prompt_tokens": 3181,
+          "final_chars": 1355,
+          "reasoning_chars": 24809
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-edge-hawthorn",
+      "status": "error",
+      "error": "Evidence quote must match its source message wording (whitespace differences are allowed). Fallback qwen3.5:4b: Date expression 'when the review finishes' must be verbatim in message long-edge-hawthorn-m3; calculated dates or wrong source IDs are rejected.",
+      "tier": null,
+      "expected": "T2",
+      "actual_provider": null,
+      "actual_model": null,
+      "fallback": null,
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 2842,
+          "final_chars": 0,
+          "reasoning_chars": 37056,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "disabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 633,
+          "prompt_tokens": 2884,
+          "final_chars": 2054,
+          "reasoning_chars": 0
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "harbor",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": "T2",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "original.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 3088,
+          "prompt_tokens": 2327,
+          "final_chars": 1063,
+          "reasoning_chars": 11431
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "sample-deadline",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": null,
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 3084,
+          "final_chars": 0,
+          "reasoning_chars": 30553,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "disabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 523,
+          "prompt_tokens": 3126,
+          "final_chars": 1821,
+          "reasoning_chars": 0
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": "disabled"
+    },
+    {
+      "thread_id": "long-edge-quince",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": "T2",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 4505,
+          "prompt_tokens": 2827,
+          "final_chars": 3149,
+          "reasoning_chars": 15840
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "sample-conditional",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": null,
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 3653,
+          "prompt_tokens": 3086,
+          "final_chars": 1893,
+          "reasoning_chars": 13521
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "novus",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "expansion.development",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 1563,
+          "prompt_tokens": 2267,
+          "final_chars": 1009,
+          "reasoning_chars": 4798
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "sample-attachment",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": null,
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 3098,
+          "final_chars": 0,
+          "reasoning_chars": 38200,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "disabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 477,
+          "prompt_tokens": 3140,
+          "final_chars": 1825,
+          "reasoning_chars": 0
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": "disabled"
+    },
+    {
+      "thread_id": "people",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T4",
+      "expected": "T4",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "original.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 1720,
+          "prompt_tokens": 2248,
+          "final_chars": 469,
+          "reasoning_chars": 6474
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "long-ember",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T3",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "long.development",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 2808,
+          "final_chars": 0,
+          "reasoning_chars": 35251,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "disabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 858,
+          "prompt_tokens": 2850,
+          "final_chars": 2821,
+          "reasoning_chars": 0
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": "disabled"
+    },
+    {
+      "thread_id": "long-edge-apricot",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 2823,
+          "final_chars": 0,
+          "reasoning_chars": 35050,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "disabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 643,
+          "prompt_tokens": 2865,
+          "final_chars": 2053,
+          "reasoning_chars": 0
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": "disabled"
+    },
+    {
+      "thread_id": "ceres",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "expansion.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 2655,
+          "prompt_tokens": 2266,
+          "final_chars": 517,
+          "reasoning_chars": 10719
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "long-edge-petal",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 2840,
+          "final_chars": 0,
+          "reasoning_chars": 35763,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "disabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 152,
+          "prompt_tokens": 2882,
+          "final_chars": 615,
+          "reasoning_chars": 0
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": "disabled"
+    },
+    {
+      "thread_id": "long-edge-larch",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 3516,
+          "prompt_tokens": 2822,
+          "final_chars": 2192,
+          "reasoning_chars": 11482
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "sample-pilot-5",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T4",
+      "expected": null,
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 3094,
+          "final_chars": 0,
+          "reasoning_chars": 34102,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "disabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 645,
+          "prompt_tokens": 3136,
+          "final_chars": 2105,
+          "reasoning_chars": 0
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": "disabled"
+    },
+    {
+      "thread_id": "drift",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T4",
+      "expected": "T4",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "original.held_out",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 2584,
+          "prompt_tokens": 2403,
+          "final_chars": 1069,
+          "reasoning_chars": 9236
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "cobalt",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T4",
+      "expected": "T4",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "original.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 2605,
+          "prompt_tokens": 2326,
+          "final_chars": 1045,
+          "reasoning_chars": 9872
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "long-edge-jasmine",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 2832,
+          "final_chars": 0,
+          "reasoning_chars": 31932,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "disabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 433,
+          "prompt_tokens": 2874,
+          "final_chars": 1513,
+          "reasoning_chars": 0
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": "disabled"
+    },
+    {
+      "thread_id": "juniper",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T4",
+      "expected": "T4",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "original.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 2104,
+          "prompt_tokens": 2402,
+          "final_chars": 517,
+          "reasoning_chars": 8221
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "sundial",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "expansion.held_out",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 3424,
+          "prompt_tokens": 2261,
+          "final_chars": 1004,
+          "reasoning_chars": 13757
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "seabrook",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": "T2",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "expansion.held_out",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 2984,
+          "prompt_tokens": 2413,
+          "final_chars": 1747,
+          "reasoning_chars": 9691
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "fairhaven",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T3",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "expansion.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 1620,
+          "prompt_tokens": 2323,
+          "final_chars": 1021,
+          "reasoning_chars": 4965
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "long-edge-garnet",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": "T2",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 2825,
+          "prompt_tokens": 2826,
+          "final_chars": 2568,
+          "reasoning_chars": 8981
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "meridian",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "original.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 4917,
+          "prompt_tokens": 2435,
+          "final_chars": 1828,
+          "reasoning_chars": 17886
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "quarry",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "expansion.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 2288,
+          "prompt_tokens": 2457,
+          "final_chars": 540,
+          "reasoning_chars": 8332
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "long-fable",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "long.development",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 2807,
+          "final_chars": 0,
+          "reasoning_chars": 31251,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "disabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 508,
+          "prompt_tokens": 2849,
+          "final_chars": 1784,
+          "reasoning_chars": 0
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": "disabled"
+    },
+    {
+      "thread_id": "pine",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "original.development",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 2390,
+          "final_chars": 0,
+          "reasoning_chars": 33834,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "disabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 168,
+          "prompt_tokens": 2432,
+          "final_chars": 637,
+          "reasoning_chars": 0
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": "disabled"
+    },
+    {
+      "thread_id": "tessera",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "original.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 1982,
+          "prompt_tokens": 2337,
+          "final_chars": 482,
+          "reasoning_chars": 7422
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "copper",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": "T2",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "expansion.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 3681,
+          "prompt_tokens": 2342,
+          "final_chars": 1599,
+          "reasoning_chars": 13136
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "sample-promo",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T4",
+      "expected": null,
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 2515,
+          "prompt_tokens": 3088,
+          "final_chars": 665,
+          "reasoning_chars": 9999
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 1617,
+          "prompt_tokens": 3194,
+          "final_chars": 722,
+          "reasoning_chars": 6299
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "mosaic",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": "T2",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "original.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 2004,
+          "prompt_tokens": 2258,
+          "final_chars": 874,
+          "reasoning_chars": 6893
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "solstice",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "original.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 2771,
+          "prompt_tokens": 2399,
+          "final_chars": 1086,
+          "reasoning_chars": 10192
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "sample-invoice",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": null,
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 3748,
+          "prompt_tokens": 3066,
+          "final_chars": 1532,
+          "reasoning_chars": 14434
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 4743,
+          "prompt_tokens": 3148,
+          "final_chars": 2047,
+          "reasoning_chars": 18100
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "long-edge-indigo",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 2936,
+          "final_chars": 0,
+          "reasoning_chars": 34826,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "disabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 712,
+          "prompt_tokens": 2978,
+          "final_chars": 2462,
+          "reasoning_chars": 0
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": "disabled"
+    },
+    {
+      "thread_id": "lumen",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "original.held_out",
+      "provider_responses": [
+        {
+          "finish_reason": "length",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 8192,
+          "prompt_tokens": 2411,
+          "final_chars": 0,
+          "reasoning_chars": 30856,
+          "recovery": "reasoning_exhaustion"
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "disabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 377,
+          "prompt_tokens": 2453,
+          "final_chars": 1122,
+          "reasoning_chars": 0
+        }
+      ],
+      "reasoning_recovery": true,
+      "final_thinking": "disabled"
+    },
+    {
+      "thread_id": "banyan",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T2",
+      "expected": "T2",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "expansion.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 4113,
+          "prompt_tokens": 2413,
+          "final_chars": 1737,
+          "reasoning_chars": 14221
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "long-edge-elmwood",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "Primary analysis exceeded its 90-second budget. No primary assessment was accepted.",
+        "primary_cache_key": "f5bb9dac96031aaf346c1e7498e565f87523300530d1c78b582e9478bb7301f0"
+      },
+      "split": "long_edge.development",
+      "provider_responses": [],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-edge-mallow",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "Primary analysis exceeded its 90-second budget. No primary assessment was accepted.",
+        "primary_cache_key": "d1ea1bbe110337cc81babbae34bfdca69704ff83221262cc68a0a99bbf4e5463"
+      },
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-beacon",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM returned HTTP 429. GLM is temporarily overloaded. Retry later.",
+        "primary_cache_key": "7297ec9c66819f2282a4558743d17506ae658a92b3e5c48fb2dfee7dfa1264f4"
+      },
+      "split": "long.development",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 3
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-delta",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": "T3",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "long.development",
+      "provider_responses": [
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 4963,
+          "prompt_tokens": 2810,
+          "final_chars": 3015,
+          "reasoning_chars": 18070
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "sample-pilot-1",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T3",
+      "expected": null,
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "unlabelled_samples",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 4439,
+          "prompt_tokens": 3207,
+          "final_chars": 2676,
+          "reasoning_chars": 15407
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "long-edge-oakridge",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "Primary analysis exceeded its 90-second budget. No primary assessment was accepted.",
+        "primary_cache_key": "3f15efea11289010e729280ac61be31c93adb1e0822b18aeb20bc820ec6a4c37"
+      },
+      "split": "long_edge.development",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "vale",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T4",
+      "expected": "T4",
+      "actual_provider": "glm",
+      "actual_model": "glm-4.7-flash",
+      "fallback": null,
+      "split": "expansion.held_out",
+      "provider_responses": [
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 1
+        },
+        {
+          "http_status": 429,
+          "provider_code": "1305",
+          "request_attempt": 2
+        },
+        {
+          "finish_reason": "stop",
+          "thinking": "enabled",
+          "max_output_tokens": 8192,
+          "completion_tokens": 1494,
+          "prompt_tokens": 2275,
+          "final_chars": 507,
+          "reasoning_chars": 5403
+        }
+      ],
+      "reasoning_recovery": false,
+      "final_thinking": "enabled"
+    },
+    {
+      "thread_id": "long-helios",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "Primary analysis exceeded its 90-second budget. No primary assessment was accepted.",
+        "primary_cache_key": "c33b13b6e2115f0a65859c479563eae263f030c32c71c0d154495edeccc602a2"
+      },
+      "split": "long.development",
+      "provider_responses": [],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "long-edge-birch",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "Primary analysis exceeded its 90-second budget. No primary assessment was accepted.",
+        "primary_cache_key": "392ec7a822a197775fbfe22f469c07466c0903a5a93f72de2c4cece26f094f8b"
+      },
+      "split": "long_edge.development",
+      "provider_responses": [],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "valence",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "GLM connection failed or timed out. Check API connectivity and retry.",
+        "primary_cache_key": "e43f23daf7320b7a7b0b43c6042fe2931b62217bbc7f1cf07890b8ed94a0986d"
+      },
+      "split": "original.development",
+      "provider_responses": [],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    },
+    {
+      "thread_id": "kinetic",
+      "status": "analyzed",
+      "error": null,
+      "tier": "T1",
+      "expected": "T1",
+      "actual_provider": "ollama",
+      "actual_model": "qwen3.5:4b",
+      "fallback": {
+        "from_provider": "glm",
+        "from_model": "glm-4.7-flash",
+        "reason": "Primary analysis exceeded its 90-second budget. No primary assessment was accepted.",
+        "primary_cache_key": "fa457bcfe4a4594532a58fd73f62f4ba257d87da68b9e2e60d995b36181acbfe"
+      },
+      "split": "original.development",
+      "provider_responses": [],
+      "reasoning_recovery": false,
+      "final_thinking": null
+    }
+  ],
+  "metric_note": "Accepted reasoning recoveries count successful GLM results only; a later Qwen fallback is counted separately."
+}

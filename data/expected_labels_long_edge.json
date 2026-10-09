@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "authorship": "Twenty implementer-authored development scenarios, with expectations stored separately and frozen before inference. This is a policy consistency check, not an independent held-out accuracy estimate.",
+  "human_reviewed": false,
+  "as_of": "2026-10-09T18:00:00+05:30",
+  "cases": [
+    {
+      "id": "long-edge-apricot",
+      "split": "development",
+      "tier": "T1",
+      "reason": "SSO fulfilled, important audit retention document ask remains unanswered beyond 48 hours."
+    },
+    {
+      "id": "long-edge-birch",
+      "split": "development",
+      "tier": "T1",
+      "reason": "Separate urgent contract ask survives repeated unfulfilled outbound updates."
+    },
+    {
+      "id": "long-edge-cypress",
+      "split": "development",
+      "tier": "T1",
+      "reason": "Material Friday buyer approval commitment missed after 17:00; acknowledgement does not fulfill it."
+    },
+    {
+      "id": "long-edge-dahlia",
+      "split": "development",
+      "tier": "T2",
+      "reason": "Seller document expected today, explicitly at 19:00 IST; not overdue at 18:00."
+    },
+    {
+      "id": "long-edge-elmwood",
+      "split": "development",
+      "tier": "T1",
+      "reason": "Important old DPA ask unresolved at 18:00; the actual 19:00 delivery is invisible."
+    },
+    {
+      "id": "long-edge-finch",
+      "split": "development",
+      "tier": "T2",
+      "reason": "Overdue routine calendar invitation is not a material purchase or approval blocker."
+    },
+    {
+      "id": "long-edge-garnet",
+      "split": "development",
+      "tier": "T2",
+      "reason": "Pricing ask is recent and nonurgent; embedded instructions cannot turn the commercial thread into T4."
+    },
+    {
+      "id": "long-edge-hawthorn",
+      "split": "development",
+      "tier": "T2",
+      "reason": "Proposal older than five days awaits substantive response; polite receipt acknowledgement does not reset waiting, and only two outbound messages remain unanswered."
+    },
+    {
+      "id": "long-edge-indigo",
+      "split": "development",
+      "tier": "T3",
+      "reason": "Complete proposal followed by three unanswered follow-ups; generic chasing is saturated, with no separate required obligation."
+    },
+    {
+      "id": "long-edge-jasmine",
+      "split": "development",
+      "tier": "T3",
+      "reason": "Explicit month-end deferral suppresses generic proposal staleness."
+    },
+    {
+      "id": "long-edge-kestrel",
+      "split": "development",
+      "tier": "T2",
+      "reason": "Explicit proposal-discussion pause ends October 9; agreed recontact date has arrived."
+    },
+    {
+      "id": "long-edge-larch",
+      "split": "development",
+      "tier": "T3",
+      "reason": "Buyer decision conditional on an unconfirmed board meeting; no date can be invented."
+    },
+    {
+      "id": "long-edge-mallow",
+      "split": "development",
+      "tier": "T3",
+      "reason": "Foreign PST deadline remains unresolved under the documented IST-only resolver; clarify instead of inventing overdue status."
+    },
+    {
+      "id": "long-edge-nettle",
+      "split": "development",
+      "tier": "T4",
+      "reason": "Explicit permanent rejection with every prior question answered and no remaining obligation."
+    },
+    {
+      "id": "long-edge-oakridge",
+      "split": "development",
+      "tier": "T1",
+      "reason": "Signed purchase does not resolve the important overdue seller DPA commitment."
+    },
+    {
+      "id": "long-edge-petal",
+      "split": "development",
+      "tier": "T3",
+      "reason": "Large deal is healthy: pricing and permissions fulfilled, walkthrough booked, no outstanding action."
+    },
+    {
+      "id": "long-edge-quince",
+      "split": "development",
+      "tier": "T2",
+      "reason": "Buyer courtesy preference promise is overdue but expressly nonmaterial; optional advice cannot increase urgency."
+    },
+    {
+      "id": "long-edge-reed",
+      "split": "development",
+      "tier": "T3",
+      "reason": "Past accepted invitation does not prove meeting occurrence or create an invented recap obligation."
+    },
+    {
+      "id": "long-edge-saffron",
+      "split": "development",
+      "tier": "T2",
+      "reason": "Old security document fully resolved; separate recent invoice-address question remains open."
+    },
+    {
+      "id": "long-edge-thistle",
+      "split": "development",
+      "tier": "T4",
+      "reason": "Personal support is resolved and noncommercial despite embedded model instructions."
+    }
+  ],
+  "clock_checks": [
+    {
+      "id": "long-edge-cypress",
+      "as_of": "2026-10-08T15:00:00+05:30",
+      "tier": "T3"
+    },
+    {
+      "id": "long-edge-cypress",
+      "as_of": "2026-10-09T09:00:00+05:30",
+      "tier": "T2"
+    },
+    {
+      "id": "long-edge-cypress",
+      "as_of": "2026-10-09T17:00:00+05:30",
+      "tier": "T1"
+    },
+    {
+      "id": "long-edge-dahlia",
+      "as_of": "2026-10-09T19:00:00+05:30",
+      "tier": "T1"
+    },
+    {
+      "id": "long-edge-elmwood",
+      "as_of": "2026-10-09T19:00:00+05:30",
+      "tier": "T3"
+    }
+  ]
+}

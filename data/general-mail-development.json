@@ -1,0 +1,29 @@
+{
+  "split": "synthetic_development",
+  "label_frozen_before_inference": true,
+  "human_reviewed": false,
+  "as_of": "2026-10-07T18:00:00+05:30",
+  "cases": [
+    {
+      "id": "work",
+      "category": "work",
+      "expected": "T1",
+      "subject": "Build access needed immediately",
+      "body": "Please restore my build access urgently now. The deployment is blocked and the team cannot release until you fix my account permissions. I need your help before the customer session starts in an hour."
+    },
+    {
+      "id": "personal",
+      "category": "personal",
+      "expected": "T2",
+      "subject": "Weekend planning",
+      "body": "Could you send me the address of the restaurant when you have a moment? I am planning our Saturday dinner and will share the route with everyone. No rush, tomorrow is perfectly fine too."
+    },
+    {
+      "id": "promotion",
+      "category": "promotion",
+      "expected": "T4",
+      "subject": "Our October sale",
+      "body": "Our October sale is now live with discounts across our entire catalog. Shop today to save on selected products while stocks last. Browse our newsletter for new arrivals and unsubscribe using the link below."
+    }
+  ]
+}

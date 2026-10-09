@@ -1,0 +1,88 @@
+{
+  "origin": "actual-model-runs",
+  "prompt_version": "2",
+  "schema_version": "1",
+  "runs": [
+    {
+      "cache_key": "d8135533115d8d2e8d1407552114dd554085d58487ee360c2d0d3dce7418f20e",
+      "thread_id": "northstar",
+      "provider": "ollama",
+      "model": "phi4-mini:latest",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"won\",\"buyer_intent\":\"high\",\"summary\":\"Northstar Systems received a revised enterprise agreement for legal review and is awaiting final approval from Daniel Ruiz's legal team.\",\"blockers\":[],\"open_items\":[{\"description\":\"Northstar Systems needs final approval from Daniel Ruiz's legal team before signing the enterprise agreement.\",\"kind\":\"commitment\",\"owner\":\"prospect\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"northstar-m2\"],\"deadline\":{\"expression\":\"Friday\",\"message_id\":\"northstar-m2\"}}],\"recommendations\":[{\"description\":\"Follow up with Daniel Ruiz to ensure the agreement is signed as planned.\",\"evidence_message_ids\":[\"northstar-m2\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":{\"expression\":\"Friday\",\"message_id\":\"northstar-m2\"}}",
+      "raw_json": "{\n  \"is_sales_related\": true,\n  \"lifecycle\": \"won\",\n  \"buyer_intent\": \"high\",\n  \"summary\": \"Northstar Systems received a revised enterprise agreement for legal review and is awaiting final approval from Daniel Ruiz's legal team.\",\n  \"blockers\": [],\n  \"open_items\": [\n    {\n      \"description\": \"Northstar Systems needs final approval from Daniel Ruiz's legal team before signing the enterprise agreement.\",\n      \"kind\": \"commitment\",\n      \"owner\": \"prospect\",\n      \"important\": true,\n      \"material\": true,\n      \"urgent\": false,\n      \"evidence_message_ids\": [\"northstar-m2\"],\n      \"deadline\": {\"expression\": \"Friday\", \"message_id\": \"northstar-m2\"}\n    }\n  ],\n  \"recommendations\": [\n    {\n      \"description\": \"Follow up with Daniel Ruiz to ensure the agreement is signed as planned.\",\n      \"evidence_message_ids\": [\"northstar-m2\"]\n    }\n  ],\n  \"ambiguity_notes\": [],\n  \"non_substantive_message_ids\": [],\n  \"proposal_message_id\": null,\n  \"deferral\": {\"expression\": \"Friday\", \"message_id\": \"northstar-m2\"}\n}",
+      "created_at": "2026-10-06T07:12:21.314269+00:00",
+      "duration_ms": 60490,
+      "input_messages": [
+        {
+          "id": "northstar-m1",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Here is the revised enterprise agreement for your legal review.",
+          "sent_at": "2026-10-05T09:00:00+05:30",
+          "attachments": [
+            "enterprise-agreement.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "northstar-m2",
+          "sender": "Daniel Ruiz",
+          "direction": "inbound",
+          "body": "The terms look good. I'll get back to you Friday with our legal team's decision. This is the final approval before we sign.",
+          "sent_at": "2026-10-05T14:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Northstar Systems",
+        "subject": "Legal review of the enterprise agreement",
+        "deal_value": 125000
+      }
+    },
+    {
+      "cache_key": "a89bbccb74576613f5b1a2aabc65c38e111febcb262d25d26b6dfd95e1cd2064",
+      "thread_id": "atlas",
+      "provider": "ollama",
+      "model": "phi4-mini:latest",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"high\",\"summary\":\"Atlas Manufacturing is awaiting a promised security packet from Alex Morgan, which is a blocker to vendor approval.\",\"blockers\":[\"security packet\"],\"open_items\":[{\"description\":\"Alex Morgan promised to send the security packet tomorrow.\",\"kind\":\"commitment\",\"owner\":\"us\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"atlas-m2\"],\"deadline\":{\"expression\":\"tomorrow\",\"message_id\":\"atlas-m2\"}}],\"recommendations\":[{\"description\":\"Follow up with Alex Morgan to ensure the security packet is sent as promised.\",\"evidence_message_ids\":[\"atlas-m2\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null}",
+      "raw_json": "{\n  \"is_sales_related\": true,\n  \"lifecycle\": \"open\",\n  \"buyer_intent\": \"high\",\n  \"summary\": \"Atlas Manufacturing is awaiting a promised security packet from Alex Morgan, which is a blocker to vendor approval.\",\n  \"blockers\": [\"security packet\"],\n  \"open_items\": [\n    {\n      \"description\": \"Alex Morgan promised to send the security packet tomorrow.\",\n      \"kind\": \"commitment\",\n      \"owner\": \"us\",\n      \"important\": true,\n      \"material\": true,\n      \"urgent\": false,\n      \"evidence_message_ids\": [\"atlas-m2\"],\n      \"deadline\": {\n        \"expression\": \"tomorrow\",\n        \"message_id\": \"atlas-m2\"\n      }\n    }\n  ],\n  \"recommendations\": [\n    {\n      \"description\": \"Follow up with Alex Morgan to ensure the security packet is sent as promised.\",\n      \"evidence_message_ids\": [\"atlas-m2\"]\n    }\n  ],\n  \"ambiguity_notes\": [],\n  \"non_substantive_message_ids\": [],\n  \"proposal_message_id\": null,\n  \"deferral\": null\n}",
+      "created_at": "2026-10-06T07:12:59.779416+00:00",
+      "duration_ms": 38261,
+      "input_messages": [
+        {
+          "id": "atlas-m1",
+          "sender": "Nadia Farouk",
+          "direction": "inbound",
+          "body": "Please send your security packet. It is the only blocker to vendor approval.",
+          "sent_at": "2026-10-05T11:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "atlas-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "I'll send the security packet tomorrow. Our audit team has the final version.",
+          "sent_at": "2026-10-05T12:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "atlas-m3",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Just acknowledging that I am checking with the audit team.",
+          "sent_at": "2026-10-08T16:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Atlas Manufacturing",
+        "subject": "Promised security packet",
+        "deal_value": 92000
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "origin": "actual-model-runs",
+  "prompt_version": "2",
+  "schema_version": "1",
+  "runs": [
+    {
+      "cache_key": "2c166a455ed04ce5ee4ad86469cc397b5bd0ec7a4bf7847caa6271a40229be8b",
+      "thread_id": "meridian",
+      "provider": "gemini",
+      "model": "gemini-3.5-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"high\",\"summary\":\"Meridian Health is evaluating 240 seats and requires SSO and SCIM provisioning for security approval. While Alex Morgan provided the SSO details, the SCIM provisioning question remains unanswered.\",\"blockers\":[\"Security approval is pending confirmation of SCIM provisioning support.\"],\"open_items\":[{\"description\":\"Confirm whether SCIM provisioning is supported to complete the security review.\",\"kind\":\"ask\",\"owner\":\"us\",\"important\":true,\"material\":true,\"urgent\":false,\"evidence_message_ids\":[\"meridian-m1\",\"meridian-m3\"],\"deadline\":null}],\"recommendations\":[{\"description\":\"Provide a direct answer regarding SCIM provisioning support to unblock the prospect's security review.\",\"evidence_message_ids\":[\"meridian-m3\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null}",
+      "raw_json": "{\n  \"is_sales_related\": true,\n  \"lifecycle\": \"open\",\n  \"buyer_intent\": \"high\",\n  \"summary\": \"Meridian Health is evaluating 240 seats and requires SSO and SCIM provisioning for security approval. While Alex Morgan provided the SSO details, the SCIM provisioning question remains unanswered.\",\n  \"blockers\": [\n    \"Security approval is pending confirmation of SCIM provisioning support.\"\n  ],\n  \"open_items\": [\n    {\n      \"description\": \"Confirm whether SCIM provisioning is supported to complete the security review.\",\n      \"kind\": \"ask\",\n      \"owner\": \"us\",\n      \"important\": true,\n      \"material\": true,\n      \"urgent\": false,\n      \"evidence_message_ids\": [\n        \"meridian-m1\",\n        \"meridian-m3\"\n      ],\n      \"deadline\": null\n    }\n  ],\n  \"recommendations\": [\n    {\n      \"description\": \"Provide a direct answer regarding SCIM provisioning support to unblock the prospect's security review.\",\n      \"evidence_message_ids\": [\n        \"meridian-m3\"\n      ]\n    }\n  ],\n  \"ambiguity_notes\": [],\n  \"non_substantive_message_ids\": [],\n  \"proposal_message_id\": null,\n  \"deferral\": null\n}",
+      "created_at": "2026-10-06T12:45:25.098579+00:00",
+      "duration_ms": 7011,
+      "input_messages": [
+        {
+          "id": "meridian-m1",
+          "sender": "Maya Chen",
+          "direction": "inbound",
+          "body": "We are evaluating 240 seats. Do you support SSO and SCIM provisioning? Both are required for our security approval.",
+          "sent_at": "2026-10-05T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "meridian-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Yes, we support SSO via SAML and OIDC. The SSO overview is attached.",
+          "sent_at": "2026-10-05T14:00:00+05:30",
+          "attachments": [
+            "SSO-overview.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "meridian-m3",
+          "sender": "Maya Chen",
+          "direction": "inbound",
+          "body": "Thanks for the SSO details. Please also answer the SCIM question so we can finish the security review.",
+          "sent_at": "2026-10-06T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Meridian Health",
+        "subject": "SSO and SCIM for 240 seats",
+        "deal_value": 72000
+      }
+    },
+    {
+      "cache_key": "c38053bf8ec8cfae1b8dac8d9a0b2fa6ee8d29e562922d2c1b809af4a0a93e28",
+      "thread_id": "long-edge-quince",
+      "provider": "gemini",
+      "model": "gemini-3.5-flash",
+      "assessment_json": "{\"is_sales_related\":true,\"lifecycle\":\"open\",\"buyer_intent\":\"low\",\"summary\":\"Ben Harper from Quince Design is exploring the identity platform and has received the product overview. He promised to send an optional dashboard color preference for the demonstration setup, which remains pending.\",\"blockers\":[],\"open_items\":[{\"description\":\"Send the optional preferred dashboard color for the demonstration setup\",\"kind\":\"commitment\",\"owner\":\"prospect\",\"important\":false,\"material\":false,\"urgent\":false,\"evidence_message_ids\":[\"long-edge-quince-m3\",\"long-edge-quince-m5\"],\"deadline\":{\"expression\":\"Friday\",\"message_id\":\"long-edge-quince-m3\"}}],\"recommendations\":[{\"description\":\"Proceed with scheduling the demonstration using default dashboard colors since the color preference is optional and not a blocker.\",\"evidence_message_ids\":[\"long-edge-quince-m6\"]}],\"ambiguity_notes\":[],\"non_substantive_message_ids\":[],\"proposal_message_id\":null,\"deferral\":null}",
+      "raw_json": "{\n  \"is_sales_related\": true,\n  \"lifecycle\": \"open\",\n  \"buyer_intent\": \"low\",\n  \"summary\": \"Ben Harper from Quince Design is exploring the identity platform and has received the product overview. He promised to send an optional dashboard color preference for the demonstration setup, which remains pending.\",\n  \"blockers\": [],\n  \"open_items\": [\n    {\n      \"description\": \"Send the optional preferred dashboard color for the demonstration setup\",\n      \"kind\": \"commitment\",\n      \"owner\": \"prospect\",\n      \"important\": false,\n      \"material\": false,\n      \"urgent\": false,\n      \"evidence_message_ids\": [\n        \"long-edge-quince-m3\",\n        \"long-edge-quince-m5\"\n      ],\n      \"deadline\": {\n        \"expression\": \"Friday\",\n        \"message_id\": \"long-edge-quince-m3\"\n      }\n    }\n  ],\n  \"recommendations\": [\n    {\n      \"description\": \"Proceed with scheduling the demonstration using default dashboard colors since the color preference is optional and not a blocker.\",\n      \"evidence_message_ids\": [\n        \"long-edge-quince-m6\"\n      ]\n    }\n  ],\n  \"ambiguity_notes\": [],\n  \"non_substantive_message_ids\": [],\n  \"proposal_message_id\": null,\n  \"deferral\": null\n}",
+      "created_at": "2026-10-06T14:47:53.281141+00:00",
+      "duration_ms": 42546,
+      "input_messages": [
+        {
+          "id": "long-edge-quince-m1",
+          "sender": "Ben Harper",
+          "direction": "inbound",
+          "body": "We are exploring your identity platform for our design team and would like the product overview. Please explain whether the trial supports guest users as well as staff. There is no active purchase approval or deadline associated with this exploration.",
+          "sent_at": "2026-10-06T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-quince-m2",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "The introductory overview is attached, and the trial supports both staff and guest users through separate roles. The guide explains the access boundaries and administrator controls. This answers the basic capability question for your team while you explore the product.",
+          "sent_at": "2026-10-06T13:00:00+05:30",
+          "attachments": [
+            "introductory-overview.pdf"
+          ],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-quince-m3",
+          "sender": "Ben Harper",
+          "direction": "inbound",
+          "body": "The overview answers our introductory questions. I'll send the optional preferred dashboard color Friday for your demonstration setup. This is only a courtesy preference, not a purchase requirement, approval blocker, or document needed for a commercial decision from our team.",
+          "sent_at": "2026-10-07T10:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-quince-m4",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "Thanks, Ben. I've recorded your courtesy preference update for Friday, and the demonstration can proceed without it if needed. Your basic capability questions are answered. There is no required commercial document or technical response pending from us in this thread.",
+          "sent_at": "2026-10-07T14:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-quince-m5",
+          "sender": "Ben Harper",
+          "direction": "inbound",
+          "body": "Our exploration is continuing without an purchase decision. The optional dashboard color preference hasn't been chosen yet, and my Friday courtesy update remains pending. This preference is unrelated to any approval deadline, procurement requirement, or commercial document needed from you.",
+          "sent_at": "2026-10-08T11:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        },
+        {
+          "id": "long-edge-quince-m6",
+          "sender": "Alex Morgan",
+          "direction": "outbound",
+          "body": "We can use the dashboard colors for the demonstration while your optional preference is pending. The trial capability information has been provided, and there are no unanswered purchase questions. I've kept your courtesy update separate from any material commercial commitment.",
+          "sent_at": "2026-10-09T09:00:00+05:30",
+          "attachments": [],
+          "simulated": false
+        }
+      ],
+      "context": {
+        "company": "Quince Design",
+        "subject": "Overdue buyer courtesy promise is not material",
+        "deal_value": 17000
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "task": "draft",
+  "items": [
+    {
+      "status": "error",
+      "error": "Draft provider returned HTTP 429 (provider code 1305). Retry after checking quota or availability.",
+      "has_draft": false
+    }
+  ]
+}
