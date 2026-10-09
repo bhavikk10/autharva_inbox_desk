@@ -1,5 +1,7 @@
 # Inbox Desk · Inbox attention
 
+[![Architecture diagram](https://gitdiagram.com/diagram-badge.svg)](https://gitdiagram.com/bhavikk10/autharva_inbox_desk?utm_source=readme&utm_medium=badge)
+
 Inbox Desk helps a salesperson decide which conversations need attention and why. It reads the full available thread, identifies unanswered requests and commitments, and presents a T1–T4 attention level with source evidence and a suggested next action. Read-only Gmail import also supports everyday inbox conversations beyond sales.
 
 The interface brings the inbox, conversation, assessment and evidence into one screen. Users can change the evaluation time, inspect analysis history, record corrections, sync replies and prepare editable reply drafts. The application does not send email or take actions in Gmail.
@@ -66,6 +68,17 @@ With no model configured, choose **Browse saved runs** from the availability not
 The latest batch has accepted assessments for **78/78 conversations**, using actual model runs and matching saved results: 37 GLM and 41 Qwen. Among 63 pre-specified expected labels, agreement is **58/63**, with zero missed T1 cases and two false T1 cases. Expected labels were fixed before model evaluation; five were user-reviewed and the remaining labels were implementer-authored. Fifteen additional conversations are unlabelled and excluded from agreement metrics.
 
 Development and held-out results remain separate in the [evaluation report](reports/batch78-evaluation.md). The models handled different subsets, so these results are not a head-to-head comparison. They are a small synthetic benchmark, not an estimate of real-inbox accuracy. Review also found an incorrect open obligation despite a matching tier, illustrating why the evidence and obligation ledger matter alongside the label.
+
+## Architecture map
+
+Expand the repository map below, or click it to open the interactive GitDiagram page. The PNG is included in this repository.
+
+<details>
+<summary>View architecture diagram</summary>
+
+[![Inbox Desk repository architecture map](diagram.png)](https://gitdiagram.com/bhavikk10/autharva_inbox_desk?utm_source=readme&utm_medium=picture)
+
+</details>
 
 ## Project guide
 
